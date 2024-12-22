@@ -1,7 +1,8 @@
 import React from "react";
 import { Typography } from "@material-tailwind/react";
-import { Navigation } from "../components/navigation";
+import { Navigation } from "../components/navigationAboutUs";
 import { Footer } from "../components/footer";
+import { TopHeader } from "../components/top-header";
 
 const timelineEvents = [
   {
@@ -74,7 +75,7 @@ const coreValues = [
 const directors = [
   {
     image: "/chairman.jpg",
-    name: "Ahmed yoosuf Al Nujaidhi",
+    name: "Ahmed Yoosuf Al Nujaidhi",
     title: "CHAIRMAN",
     description:
       "Is leading up the directions of ANC Corporation, ensuring the implementation of policies and procedures, and responsibilities, with strong vision.",
@@ -90,7 +91,6 @@ const directors = [
 
 const whyUsPoints = [
   "12+ Years of Marketing Excellence",
-  "State-of-the-Art Equipment",
   "Power of Togetherness",
   "Customers served by Expert Staff, Better",
   "Skilled and Trained Workforce",
@@ -116,7 +116,8 @@ const certifications = [
 
 export default function AboutUs() {
   return (
-    <main className="flex flex-col min-h-screen">
+    <main className="flex flex-col min-h-screen overflow-x-hidden">
+      <TopHeader />
       <Navigation />
       {/* Hero Section */}
       <div className="relative h-[500px] bg-black">
@@ -215,7 +216,7 @@ export default function AboutUs() {
                       <p className="mt-2 text-gray-600">{event.description}</p>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-red-500 rounded-full border-4 border-white hover:w-16 hover:h-16 duration-300" />
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-12 h-12 bg-red-500 rounded-full border-4 border-white hover:w-16 hover:h-16 duration-500" />
                 </div>
               ))}
             </div>
@@ -232,12 +233,12 @@ export default function AboutUs() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {directors.map((director, index) => (
               <div key={index} className="text-center">
-                <div className="relative w-48 h-48 mx-auto mb-4">
+                <div className="relative w-48 h-48 mx-auto mb-8">
                   <img
                     src={director.image}
                     alt={director.name}
                     fill
-                    className="rounded-full object-cover"
+                    className="rounded-full object-cover scale-95 hover:scale-105 duration-700"
                   />
                 </div>
                 <h3 className="text-xl font-bold">{director.name}</h3>

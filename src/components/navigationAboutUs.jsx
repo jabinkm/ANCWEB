@@ -117,7 +117,7 @@ export function Navigation() {
               color="blue-gray"
               className="p-1 font-normal"
             >
-              <Link to={"/"} className="flex items-center text-red-600 font-medium">
+              <Link to={"/"} className="flex items-center text-gray-700 hover:text-red-600">
                 HOME
               </Link>
             </Typography>
@@ -127,7 +127,7 @@ export function Navigation() {
               color="blue-gray"
               className="p-1 font-normal"
             >
-              <Link to={"/about-us"} className="flex items-center text-gray-700 hover:text-red-600">
+              <Link to={"/about-us"} className="flex items-center text-red-600 hover:text-red-600">
                 ABOUT US
               </Link>
             </Typography>
@@ -185,7 +185,7 @@ export function Navigation() {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to={"/"} className="flex items-center text-red-600 font-medium" onClick={() => setIsOpen(false)}>
+            <Link to={"/"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
               HOME
             </Link>
           </Typography>
@@ -195,7 +195,7 @@ export function Navigation() {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to={"#about"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+            <Link to={"#about"} className="flex items-center text-red-600 hover:text-red-600" onClick={() => setIsOpen(false)}>
               ABOUT US
             </Link>
           </Typography>

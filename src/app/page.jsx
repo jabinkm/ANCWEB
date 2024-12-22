@@ -1,5 +1,5 @@
 import { TopHeader } from '../components/top-header'
-import { Navigation } from '../components/navigation'
+import { Navigation } from '../components/navigationHome'
 import { Hero } from '../components/hero'
 import { About } from '../components/about'
 import { Services } from '../components/services'
@@ -10,7 +10,7 @@ import { Footer } from '../components/footer'
 
 export default function Home() {
   return (
-    <main className="flex flex-col max-h-screen">
+    <main className="flex flex-col max-h-screen overflow-x-hidden">
       <TopHeader />
       <Navigation />
       <Hero />
