@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <img
-              src="public/images/ANClogowithnobg.png"
+              src="images/ANClogowithnobg.png"
               
               alt="ANC Logo"
               width={150}
