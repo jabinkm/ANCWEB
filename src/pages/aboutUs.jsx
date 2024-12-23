@@ -92,8 +92,9 @@ const directors = [
 const whyUsPoints = [
   "12+ Years of Marketing Excellence",
   "Power of Togetherness",
-  "Customers served by Expert Staff, Better",
-  "Skilled and Trained Workforce",
+  "2.2 Million+ Manhours without LTI",
+  "Customers served by Expert Staffs",
+  "300 + Skilled and Trained Workforce",
 ];
 
 const certifications = [
@@ -122,13 +123,13 @@ export default function AboutUs() {
       {/* Hero Section */}
       <div className="relative h-[500px] bg-black">
         <img
-          src="images/ksamap.jpg"
+          src="images/about.png"
           alt="About Us Hero"
           fill
           className="object-cover opacity-50 h-[500px] w-full"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-          <h1 className="text-5xl font-bold mb-4">ABOUT ANC ARABIA</h1>
+          <h1 className="text-2xl sm:text-5xl md:text-6xl font-bold mb-4">ABOUT ANC ARABIA</h1>
           <p className="text-xl">One Word. Substantial Solutions.</p>
         </div>
       </div>
@@ -154,12 +155,12 @@ export default function AboutUs() {
       </section>
 
       {/* Our Numbers Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="md:py-16 bg-white">
+        <div className="container mx-auto px-4 py-12">
           <h2 className="text-4xl font-bold text-center mb-16">Our numbers</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
             {statistics.map((stat, index) => (
-              <div key={index} className="text-center shadow-xl rounded-lg">
+              <div key={index} className="text-center shadow-2xl rounded-lg py-8">
                 <div className="mb-2">
                   <span className="text-red-600 text-5xl font-bold">
                     {stat.number}
@@ -256,7 +257,7 @@ export default function AboutUs() {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <img
-                src="/why-us-image.jpg"
+                src="images/whyus.jpeg"
                 alt="Why Choose Us"
                 width={600}
                 height={400}
@@ -282,7 +283,7 @@ export default function AboutUs() {
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
-            COMMITTED TO SAFETY
+            COMMITTED TO SAFETY AND QUALITY
           </h2>
           <p className="text-center max-w-4xl mx-auto mb-12">
             Our team principle is to ensure a safe and healthy environment for
