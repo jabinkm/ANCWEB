@@ -107,7 +107,7 @@ export function Navigation() {
           alt="ANC Logo"
           width={200}
           height={60}
-          className="h-12 w-auto"
+          className="sm:h-12 w-auto"
         />
         <div className="hidden lg:block">
           <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -155,7 +155,7 @@ export function Navigation() {
               color="blue-gray"
               className="p-1 font-normal"
             >
-              <Link to={"#contact"} className="flex items-center text-gray-700 hover:text-red-600">
+              <Link to={"/contact-us"} className="flex items-center text-gray-700 hover:text-red-600">
                 GET IN TOUCH
               </Link>
             </Typography>
@@ -223,7 +223,7 @@ export function Navigation() {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to={"#contact"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+            <Link to={"/contact-us"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
               GET IN TOUCH
             </Link>
           </Typography>

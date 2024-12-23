@@ -155,7 +155,7 @@ export function Navigation() {
               color="blue-gray"
               className="p-1 font-normal"
             >
-              <Link to={"#contact"} className="flex items-center text-gray-700 hover:text-red-600">
+              <Link to={"/contact-us"} className="flex items-center text-gray-700 hover:text-red-600">
                 GET IN TOUCH
               </Link>
             </Typography>
@@ -195,7 +195,7 @@ export function Navigation() {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to={"#about"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+            <Link to={"/about-us"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
               ABOUT US
             </Link>
           </Typography>
@@ -223,7 +223,7 @@ export function Navigation() {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to={"#contact"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+            <Link to={"/contact-us"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
               GET IN TOUCH
             </Link>
           </Typography>
