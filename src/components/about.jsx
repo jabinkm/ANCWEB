@@ -4,15 +4,15 @@ import { Button } from "@material-tailwind/react";
 export function About() {
   return (
     <section id="about" className="py-16 md:py-24 bg-gray-100">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 my-auto">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <img
-              src="/about-image.jpg"
+              src="images/aboutHero.png"
               alt="About ANC"
               width={600}
               height={400}
-              className="rounded-lg shadow-lg"
+              className="rounded-lg shadow-xl  transition  duration-300"
             />
           </div>
           <div className="md:w-1/2 md:pl-12">

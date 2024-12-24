@@ -74,16 +74,16 @@ const coreValues = [
 
 const directors = [
   {
-    image: "/chairman.jpg",
+    image: "images/AhmedYoosuf.png",
     name: "Ahmed Yoosuf Al Nujaidhi",
-    title: "CHAIRMAN",
+    title: "CEO",
     description:
       "Is leading up the directions of ANC Corporation, ensuring the implementation of policies and procedures, and responsibilities, with strong vision.",
   },
   {
     image: "images/shamnadkka.jpg",
     name: "Shamnad Hamza",
-    title: "CEO",
+    title: "General Manager",
     description:
       "With extensive experience in Oil industry is ultimately responsible for the overall direction, the corporate strategies and Policies of ANC operations.",
   },
@@ -126,9 +126,9 @@ export default function AboutUs() {
           src="images/about.png"
           alt="About Us Hero"
           fill
-          className="object-cover opacity-50 h-[500px] w-full"
+          className="object-cover opacity-70 h-[500px] w-full"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+        <div className="absolute inset-0 flex flex-col items-center justify-evenly text-white/60">
           <h1 className="text-2xl sm:text-5xl md:text-6xl font-bold mb-4">ABOUT ANC ARABIA</h1>
           <p className="text-xl">One Word. Substantial Solutions.</p>
         </div>
@@ -280,7 +280,7 @@ export default function AboutUs() {
       </section>
 
       {/* Committed to Safety Section */}
-      <section className="py-16 bg-gray-900 text-white">
+      {/* <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
             COMMITTED TO SAFETY AND QUALITY
@@ -313,7 +313,7 @@ export default function AboutUs() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Our Presence Section */}
       <section className="py-16 bg-gray-100">

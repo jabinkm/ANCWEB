@@ -1,123 +1,305 @@
+'use client'
 
-import { Card, CardBody, Input, Textarea, Button } from "@material-tailwind/react";
+import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { Button, Input, Textarea, Typography } from "@material-tailwind/react"
+import { TopHeader } from '../components/top-header'
+import { Navigation } from '../components/navigationHome'
+import { Footer } from '../components/footer'
 
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { Navigation } from "../components/navigationHome";
-import { TopHeader } from "../components/top-header";
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  })
+  const [errors, setErrors] = useState({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
 
-const ContactUs = () => {
-    const [formData, setFormData] = useState({
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }))
+  }
+
+  const validateForm = () => {
+    let formErrors = {}
+    if (!formData.name.trim()) formErrors.name = 'Name is required'
+    if (!formData.email.trim()) {
+      formErrors.email = 'Email is required'
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
+      formErrors.email = 'Invalid email address'
+    }
+    if (!formData.phone.trim()) {
+      formErrors.phone = 'Phone number is required'
+    } else if (!/^[0-9+\-\s()]*$/.test(formData.phone)) {
+      formErrors.phone = 'Invalid phone number'
+    }
+    if (!formData.subject.trim()) formErrors.subject = 'Subject is required'
+    if (!formData.message.trim()) formErrors.message = 'Message is required'
+    return formErrors
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    const formErrors = validateForm()
+    if (Object.keys(formErrors).length > 0) {
+      setErrors(formErrors)
+      return
+    }
+    setIsSubmitting(true)
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: 'jabinkm007@gmail.com'
+      }
+
+      await emailjs.send(
+        'service_xe8ivs1',
+        'template_m6z04de',
+        templateParams,
+        'EvyYYe6XpycuOpbkV'
+      )
+
+      setSubmitStatus({ type: 'success', message: 'Message sent successfully!' })
+      setFormData({
         name: '',
         email: '',
+        phone: '',
+        subject: '',
         message: ''
-    });
+      })
+      setErrors({})
+    } catch (error) {
+      setSubmitStatus({ 
+        type: 'error', 
+        message: 'Failed to send message. Please try again.' 
+      })
+    }
+    setIsSubmitting(false)
+  }
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value
-        });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const templateParams = {
-            from_name: formData.name,
-            from_email: formData.email,
-            message: formData.message,
-            to_email: 'jabinkm007@gmail.com'
-        };
-
-        emailjs.send('service_xe8ivs1', 'template_m6z04de', {
-            publicKey: 'EvyYYe6XpycuOpbkV',
-          })
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-            }, (err) => {
-                console.log('FAILED...', err);
-            });
-
-        setFormData({
-            name: '',
-            email: '',
-            message: ''
-        });
-    };
-
-    return (
-        <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100">
-            <TopHeader />
-            <Navigation />
-            <Card className="w-full max-w-md">
-                <CardBody>
-                    <h1 className="text-2xl font-bold mb-6 text-center">Contact Us</h1>
-                    <form onSubmit={handleSubmit}>
-                        <div className="mb-4">
-                            <Input
-                                type="text"
-                                name="name"
-                                label="Name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                className="w-full"
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <Input
-                                type="email"
-                                name="email"
-                                label="Email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                                className="w-full"
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <Textarea
-                                name="message"
-                                label="Message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                required
-                                className="w-full"
-                            />
-                        </div>
-                        <Button type="submit" color="blue" className="w-full">Submit</Button>
-                    </form>
-                </CardBody>
-            </Card>
+  return (
+    <main className="min-h-screen bg-gray-50">
+        <TopHeader />
+        <Navigation />
+      {/* Hero Section */}
+      <div className="relative h-[500px] bg-black">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('images/contactBanner.png')",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/50" />
         </div>
-    );
-};
+        <div className="relative container mx-auto h-full flex flex-col justify-center items-center text-white px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+          <p className="text-xl text-center">Get in touch with us for any inquiries or support</p>
+        </div>
+      </div>
 
-export default ContactUs;
-import { useEffect } from 'react';
+      {/* Contact Info & Form Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div>
+                <Typography variant="h3" className="mb-6">Get in Touch</Typography>
+                <Typography className="text-gray-700">
+                  We're here to help and answer any questions you might have. 
+                  We look forward to hearing from you.
+                </Typography>
+              </div>
 
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-red-50 rounded-lg">
+                    <i className="fas fa-map-marker-alt text-red-500 text-xl" />
+                  </div>
+                  <div>
+                    <Typography variant="h6" className="mb-1">Address</Typography>
+                    <Typography className="text-gray-700">
+                      King Saud Street Intersection 1 - 2,<br />
+                      Al Khobar - 31952, Saudi Arabia
+                    </Typography>
+                  </div>
+                </div>
 
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-red-50 rounded-lg">
+                    <i className="fas fa-phone text-red-500 text-xl" />
+                  </div>
+                  <div>
+                    <Typography variant="h6" className="mb-1">Phone</Typography>
+                    <Typography className="text-gray-700">
+                      +966 13 867 2400
+                    </Typography>
+                  </div>
+                </div>
 
-const validateForm = () => {
-    const { name, email, message } = formData;
-    if (!name || !email || !message) {
-        return false;
-    }
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        return false;
-    }
-    return true;
-};
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-red-50 rounded-lg">
+                    <i className="fas fa-envelope text-red-500 text-xl" />
+                  </div>
+                  <div>
+                    <Typography variant="h6" className="mb-1">Email</Typography>
+                    <Typography className="text-gray-700">
+                      info@anc-contracting.com
+                    </Typography>
+                  </div>
+                </div>
 
-useEffect(() => {
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-        if (!validateForm()) {
-            e.preventDefault();
-            alert('Please fill out all fields correctly.');
-        }
-    });
-}, [formData]);
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 bg-red-50 rounded-lg">
+                    <i className="fas fa-clock text-red-500 text-xl" />
+                  </div>
+                  <div>
+                    <Typography variant="h6" className="mb-1">Working Hours</Typography>
+                    <Typography className="text-gray-700">
+                      Sunday - Thursday: 8:00 AM - 6:00 PM
+                    </Typography>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="bg-white p-6 rounded-lg shadow-lg">
+              <Typography variant="h4" className="mb-6">Send us a Message</Typography>
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <Input
+                    type="text"
+                    name="name"
+                    label="Full Name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    error={Boolean(errors.name)}
+                  />
+                  {errors.name && (
+                    <Typography color="red" className="mt-1 text-sm">
+                      {errors.name}
+                    </Typography>
+                  )}
+                </div>
+
+                <div>
+                  <Input
+                    type="email"
+                    name="email"
+                    label="Email Address"
+                    value={formData.email}
+                    onChange={handleChange}
+                    error={Boolean(errors.email)}
+                  />
+                  {errors.email && (
+                    <Typography color="red" className="mt-1 text-sm">
+                      {errors.email}
+                    </Typography>
+                  )}
+                </div>
+
+                <div>
+                  <Input
+                    type="tel"
+                    name="phone"
+                    label="Phone Number"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    error={Boolean(errors.phone)}
+                  />
+                  {errors.phone && (
+                    <Typography color="red" className="mt-1 text-sm">
+                      {errors.phone}
+                    </Typography>
+                  )}
+                </div>
+
+                <div>
+                  <Input
+                    type="text"
+                    name="subject"
+                    label="Subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    error={Boolean(errors.subject)}
+                  />
+                  {errors.subject && (
+                    <Typography color="red" className="mt-1 text-sm">
+                      {errors.subject}
+                    </Typography>
+                  )}
+                </div>
+
+                <div>
+                  <Textarea
+                    name="message"
+                    label="Message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={handleChange}
+                    error={Boolean(errors.message)}
+                  />
+                  {errors.message && (
+                    <Typography color="red" className="mt-1 text-sm">
+                      {errors.message}
+                    </Typography>
+                  )}
+                </div>
+
+                {submitStatus && (
+                  <Typography
+                    color={submitStatus.type === 'success' ? 'green' : 'red'}
+                    className="mt-2"
+                  >
+                    {submitStatus.message}
+                  </Typography>
+                )}
+
+                <Button
+                  type="submit"
+                  className="w-full bg-red-600 hover:bg-red-700"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <Typography variant="h3" className="text-center mb-8">Our Location</Typography>
+          <div className="h-[500px] w-full rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.7261415076!2d50.19808881503!3d26.29080898341711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e674f71ad58d%3A0x5af3c1f3c3c8f0f0!2sKing%20Saud%20St%2C%20Al%20Khobar%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </main>
+  )
+}
+

@@ -4,22 +4,22 @@ import { Card, CardHeader, CardBody, Typography } from "@material-tailwind/react
 const projects = [
   {
     title: 'Industrial Plant Insulation',
-    image: '/project1.jpg',
+    image: 'images/industrialPlantInsulation.avif',
     description: 'Comprehensive thermal insulation for a large industrial plant in Jubail.',
   },
   {
     title: 'Oil Refinery Coating',
-    image: '/project2.jpg',
+    image: 'images/oilRefinaryCoating.jpg',
     description: 'Protective coating application for an oil refinery in Yanbu.',
   },
   {
     title: 'Commercial Building HVAC',
-    image: '/project3.jpg',
+    image: 'images/CommercialHVAC.jpeg',
     description: 'HVAC insulation for a high-rise commercial building in Riyadh.',
   },
   {
     title: 'Pipeline Heat Tracing',
-    image: '/project4.jpg',
+    image: 'images/EHT.jpg',
     description: 'Electric heat tracing system for a long-distance pipeline project.',
   },
 ]
@@ -32,12 +32,13 @@ export function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="mt-6 hover:shadow-lg transition-shadow duration-300">
-              <CardHeader color="blue-gray" className="relative h-56">
+              <CardHeader color="blue-gray" className="relative h-56 hover:scale-105 transition-transform duration-300">
                 <img
                   src={project.image}
                   alt={project.title}
                   layout="fill"
                   objectFit="cover"
+                  className="object-cover w-full h-full rounded-t-lg"
                 />
               </CardHeader>
               <CardBody>

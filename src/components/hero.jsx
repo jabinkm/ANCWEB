@@ -2,10 +2,10 @@ import { Button, IconButton } from "@material-tailwind/react";
 
 export function Hero() {
   return (
-    <div className="relative h-[600px] md:h-[700px]">
+    <div className="relative h-[500px] md:h-[600px]">
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[600px] md:h-[700px]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat h-[500px] md:h-[600px]"
         style={{
           backgroundImage: "url('images/hero-bg.jpg')",
         }}
