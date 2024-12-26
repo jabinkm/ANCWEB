@@ -1,5 +1,6 @@
 
 import { Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 export function About() {
   return (
@@ -23,9 +24,11 @@ export function About() {
             <p className="text-lg text-gray-600 mb-6">
               Our team of skilled professionals is committed to delivering excellence in every project we undertake. We pride ourselves on our attention to detail, use of cutting-edge technology, and adherence to international quality standards.
             </p>
+            <Link to={"/about-us"}>
             <Button className="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition duration-300">
               Learn More About Us
             </Button>
+            </Link>
           </div>
         </div>
       </div>
