@@ -19,7 +19,7 @@ export function About() {
           <div className="md:w-1/2 md:pl-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">About ANC</h2>
             <p className="text-lg text-gray-600 mb-6">
-              Ahmed Yoosuf Al Nujaidhi Contracting Est. (ANC) is a leading contracting company based in Al Khobar, Saudi Arabia. With over two decades of experience, we specialize in providing top-quality insulation and coating solutions for industrial and commercial projects.
+              Ahmed Yoosuf Al Nujaidhi Contracting Company (ANC) is a leading contracting company based in Al Khobar, Saudi Arabia. With over 12 years of experience, we specialize in providing top-quality insulation and coating solutions for industrial and commercial projects.
             </p>
             <p className="text-lg text-gray-600 mb-6">
               Our team of skilled professionals is committed to delivering excellence in every project we undertake. We pride ourselves on our attention to detail, use of cutting-edge technology, and adherence to international quality standards.

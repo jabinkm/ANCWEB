@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import { TopHeader } from '../components/top-header'
 import { Navigation } from '../components/navigationHome'
 import { Hero } from '../components/hero'
@@ -11,6 +12,9 @@ import IsoCertificate from '../components/isoCertificate'
 import OurClients from '../components/ourClients'
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="flex flex-col max-h-screen overflow-x-hidden">
       <TopHeader />

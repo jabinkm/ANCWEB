@@ -7,40 +7,36 @@ import React from 'react';
 
 const divisionsMenu = [
   {
-    title: "SPECIALITY SERVICE DIVISION",
-    subMenu: [
-      "THERMAL INSULATION COATING & PAINTING",
-      "FIREPROOFING",
-      "REFRACTORY WORKS",
-      "SCAFFOLDING SERVICES",
-      "WATER PROOFING"
-    ]
-  },
-  {
-    title: "MECHANICAL DIVISION",
+    title: "MECHANICAL DIVISION (MED)",
     subMenu: [
       "PIPING",
-      "STEEL STRUCTURE",
-      "EQUIPMENT",
-      "PRE ENGINEERED BUILDINGS"
+      "EQUIPMENT ERECTION",
+      "STEEEL STRUCTURE FABRICATION & ERECTION",
+      "PRE ENGINEERED BUILDINGS",
+      "VALVES & INSTRUMENTS"
     ]
   },
+
   {
-    title: "ELECTRICAL HEAT TRACING",
+    title: "SPECIALITY SERVICE DIVISION (SSD)",
     subMenu: [
+      "THERMAL & ACOUSTIC INSULATION",
+      "COATING & PAINTING",
+      "FIREPROOFING",
+      "SCAFFOLDING SERVICES",
+      "REFRACTORY WORKS",
+      "WATER PROOFING",
       "ELECTRICAL HEAT TRACING",
-      "LEAK DETECTION SYSTEM"
     ]
   },
+  
   {
-    title: "CIVIL PROJECTS",
+    title: "INDUSTRIAL MATERIALS SUPPLY",
     subMenu: [
-      "FACILITY MANAGEMENT",
-      "CIVIL CONSTRUCTION",
-      "PROJECT SITE MANAGEMENT",
-      "ROAD CONSTRUCTION"
+      "",
+      ""
     ]
-  }
+  },
 ];
 
 function DivisionsMenu() {
@@ -48,7 +44,7 @@ function DivisionsMenu() {
     <Menu>
       <MenuHandler>
         <Typography as="div" variant="small" className="font-normal cursor-pointer text-gray-700 hover:text-red-600">
-          DIVISIONS
+          OUR SERVICES
         </Typography>
       </MenuHandler>
       <MenuList className="p-1">
@@ -73,7 +69,7 @@ function MobileDivisionsMenu() {
   return (
     <div className="pl-3">
       <Typography variant="small" color="blue-gray" className="font-medium">
-        DIVISIONS
+        OUR SERVICES
       </Typography>
       {divisionsMenu.map((division, index) => (
         <div key={index} className="pl-3 mt-1">
@@ -145,7 +141,7 @@ export function Navigation() {
               color="blue-gray"
               className="p-1 font-normal"
             >
-              <Link to={"#projects"} className="flex items-center text-gray-700 hover:text-red-600">
+              <Link to={"/projects"} className="flex items-center text-gray-700 hover:text-red-600">
                 PROJECTS
               </Link>
             </Typography>
@@ -156,7 +152,7 @@ export function Navigation() {
               className="p-1 font-normal"
             >
               <Link to={"/contact-us"} className="flex items-center text-gray-700 hover:text-red-600">
-                GET IN TOUCH
+                CONTACT US
               </Link>
             </Typography>
           </ul>
@@ -213,7 +209,7 @@ export function Navigation() {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to={"#projects"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+            <Link to={"/projects"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
               PROJECTS
             </Link>
           </Typography>
@@ -224,7 +220,7 @@ export function Navigation() {
             className="p-1 font-normal"
           >
             <Link to={"/contact-us"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
-              GET IN TOUCH
+              CONTACT US
             </Link>
           </Typography>
         </ul>

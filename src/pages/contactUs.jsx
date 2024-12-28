@@ -1,13 +1,16 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { Button, Input, Textarea, Typography } from "@material-tailwind/react"
 import { TopHeader } from '../components/top-header'
-import { Navigation } from '../components/navigationHome'
+import { Navigation } from '../components/navigationContactUs'
 import { Footer } from '../components/footer'
 
 export default function ContactPage() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -144,7 +147,8 @@ export default function ContactPage() {
                   <div>
                     <Typography variant="h6" className="mb-1">Phone</Typography>
                     <Typography className="text-gray-700">
-                      +966 13 867 2400
+                    <a href="tel:+966 13 893 3315">+966 13 893 3315</a>
+                    <p><a href="tel:+966 50 131 0073">+966 50 131 0073</a></p>
                     </Typography>
                   </div>
                 </div>
@@ -155,8 +159,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <Typography variant="h6" className="mb-1">Email</Typography>
-                    <Typography className="text-gray-700">
-                      info@anc-contracting.com
+                    <Typography className="">
+                    <p className="text-gray-600 hover:text-red-600"><a href="mailto:info@ancarabia.com">info@ancarabia.com</a></p>
+                    <p className="text-gray-600 hover:text-red-600"><a href="mailto:sales@ancarabia.com">sales@ancarabia.com</a></p>
                     </Typography>
                   </div>
                 </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{ useEffect} from "react";
 import { Typography } from "@material-tailwind/react";
 import { Navigation } from "../components/navigationAboutUs";
 import { Footer } from "../components/footer";
@@ -116,6 +116,9 @@ const certifications = [
 ];
 
 export default function AboutUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="flex flex-col min-h-screen">
       <TopHeader />

@@ -9,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <img
-              src="images/ANClogowithnobg.png"
+              src="images/ANCwhite.png"
               
               alt="ANC Logo"
               width={150}
@@ -17,7 +17,7 @@ export function Footer() {
               className="mb-4"
             />
             <Typography color="gray" className="font-normal">
-              Ahmed Yoosuf Al Nujaidhi Contracting Est. (ANC) is a leading provider of insulation and coating solutions in Saudi Arabia.
+              Ahmed Yoosuf Al Nujaidhi Contracting Company (ANC) is a leading provider of insulation and coating solutions in Saudi Arabia.
             </Typography>
           </div>
           <div>
@@ -26,10 +26,10 @@ export function Footer() {
             </Typography>
             <ul className="space-y-2">
               <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"/"} >Home</Link></li>
-              <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"#about"}>About Us</Link></li>
+              <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"/about-us"}>About Us</Link></li>
               <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"#services"}>Services</Link></li>
-              <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"#projects"}>Projects</Link></li>
-              <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"#contact"}>Contact</Link></li>
+              <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"/projects"}>Projects</Link></li>
+              <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"/contact-us"}>Contact</Link></li>
             </ul>
           </div>
           <div>
@@ -40,10 +40,12 @@ export function Footer() {
               King Saud Street Intersection 1 - 2, Al Khobar - 31952, Saudi Arabia
             </Typography>
             <Typography color="gray" className="font-normal mb-2">
-              Phone: +966 13 867 2400
+            <p className="text-gray-600 hover:text-red-500"><a href="tel:+966 13 893 3315">+966 13 893 3315</a></p>
+            <p className="text-gray-600 hover:text-red-500"><a href="tel:+966 50 131 0073">+966 50 131 0073</a></p>
             </Typography>
             <Typography color="gray" className="font-normal">
-              Email: info@anc-contracting.com
+            <p className="text-gray-600 hover:text-red-500"><a href="mailto:info@ancarabia.com">info@ancarabia.com</a></p>
+            <p className="text-gray-600 hover:text-red-500"><a href="mailto:sales@ancarabia.com">sales@ancarabia.com</a></p>
             </Typography>
           </div>
           <div>
@@ -66,9 +68,9 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <Typography color="gray" className="font-normal">
-            &copy; {new Date().getFullYear()} Ahmed Yoosuf Al Nujaidhi Contracting Est. All rights reserved.
+        <div className="border-t border-gray-800 mt-5 pt-5 text-center">
+          <Typography color="red" className="font-normal">
+            &copy; {new Date().getFullYear()} Ahmed Yoosuf Al Nujaidhi Contracting Company All rights reserved.
           </Typography>
         </div>
       </div>

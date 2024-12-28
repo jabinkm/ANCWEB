@@ -6,38 +6,37 @@ import { Navbar, Collapse, Typography, IconButton, Button, Menu, MenuHandler, Me
 import React from 'react';
 
 const divisionsMenu = [
-  {
-    title: "MECHANICAL DIVISION (MED)",
-    subMenu: [
-      "PIPING",
-      "EQUIPMENT ERECTION",
-      "STEEEL STRUCTURE FABRICATION & ERECTION",
-      "PRE ENGINEERED BUILDINGS",
-      "VALVES & INSTRUMENTS"
-    ]
-  },
-
-  {
-    title: "SPECIALITY SERVICE DIVISION (SSD)",
-    subMenu: [
-      "THERMAL & ACOUSTIC INSULATION",
-      "COATING & PAINTING",
-      "FIREPROOFING",
-      "SCAFFOLDING SERVICES",
-      "REFRACTORY WORKS",
-      "WATER PROOFING",
-      "ELECTRICAL HEAT TRACING",
-    ]
-  },
-  
-  {
-    title: "INDUSTRIAL MATERIALS SUPPLY",
-    subMenu: [
-      "",
-      ""
-    ]
-  },
-
+    {
+        title: "MECHANICAL DIVISION (MED)",
+        subMenu: [
+          "PIPING",
+          "EQUIPMENT ERECTION",
+          "STEEEL STRUCTURE FABRICATION & ERECTION",
+          "PRE ENGINEERED BUILDINGS",
+          "VALVES & INSTRUMENTS"
+        ]
+      },
+    
+      {
+        title: "SPECIALITY SERVICE DIVISION (SSD)",
+        subMenu: [
+          "THERMAL & ACOUSTIC INSULATION",
+          "COATING & PAINTING",
+          "FIREPROOFING",
+          "SCAFFOLDING SERVICES",
+          "REFRACTORY WORKS",
+          "WATER PROOFING",
+          "ELECTRICAL HEAT TRACING",
+        ]
+      },
+      
+      {
+        title: "INDUSTRIAL MATERIALS SUPPLY",
+        subMenu: [
+          "",
+          ""
+        ]
+      },
 ];
 
 function DivisionsMenu() {
@@ -45,7 +44,7 @@ function DivisionsMenu() {
     <Menu>
       <MenuHandler>
         <Typography as="div" variant="small" className="font-normal cursor-pointer text-gray-700 hover:text-red-600">
-        OUR SERVICES
+            OUR SERVICES
         </Typography>
       </MenuHandler>
       <MenuList className="p-1">
@@ -104,7 +103,7 @@ export function Navigation() {
           alt="ANC Logo"
           width={200}
           height={60}
-          className="h-12 w-auto"
+          className="sm:h-12 w-auto"
         />
         <div className="hidden lg:block">
           <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -114,7 +113,7 @@ export function Navigation() {
               color="blue-gray"
               className="p-1 font-normal"
             >
-              <Link to={"/"} className="flex items-center text-red-600 font-medium">
+              <Link to={"/"} className="flex items-center text-gray-700 hover:text-red-600">
                 HOME
               </Link>
             </Typography>
@@ -142,7 +141,7 @@ export function Navigation() {
               color="blue-gray"
               className="p-1 font-normal"
             >
-              <Link to={"/projects"} className="flex items-center text-gray-700 hover:text-red-600">
+              <Link to={"/projects"} className="flex items-center text-red-600 hover:text-red-600">
                 PROJECTS
               </Link>
             </Typography>
@@ -182,7 +181,7 @@ export function Navigation() {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to={"/"} className="flex items-center text-red-600 hover:text-red-600" onClick={() => setIsOpen(false)}>
+            <Link to={"/"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
               HOME
             </Link>
           </Typography>
@@ -192,7 +191,7 @@ export function Navigation() {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to={"/about-us"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+            <Link to={"#about"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
               ABOUT US
             </Link>
           </Typography>
@@ -210,7 +209,7 @@ export function Navigation() {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to={"/projects"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+            <Link to={"/projects"} className="flex items-center text-red-600 hover:text-red-600" onClick={() => setIsOpen(false)}>
               PROJECTS
             </Link>
           </Typography>
