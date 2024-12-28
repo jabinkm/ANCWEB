@@ -7,6 +7,8 @@ import { Projects } from '../components/projects'
 import { Testimonials } from '../components/testimonials'
 import { Contact } from '../components/contact'
 import { Footer } from '../components/footer'
+import IsoCertificate from '../components/isoCertificate'
+import OurClients from '../components/ourClients'
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <About />
       <Services />
       <Projects />
+      <OurClients />
+      <IsoCertificate />
       <Testimonials />
       <Contact />
       <Footer />

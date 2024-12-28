@@ -93,6 +93,7 @@ export default function ContactPage() {
         <TopHeader />
         <Navigation />
       {/* Hero Section */}
+      <div className="overflow-hidden">
       <div className="relative h-[500px] bg-black">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -124,7 +125,7 @@ export default function ContactPage() {
 
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-red-50 rounded-lg">
+                  <div className="p-4 bg-red-50 rounded-lg">
                     <i className="fas fa-map-marker-alt text-red-500 text-xl" />
                   </div>
                   <div>
@@ -285,7 +286,7 @@ export default function ContactPage() {
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <Typography variant="h3" className="text-center mb-8">Our Location</Typography>
-          <div className="h-[500px] w-full rounded-lg overflow-hidden shadow-lg">
+          <div className="md:h-[500px] h-[300px] w-full rounded-lg overflow-hidden shadow-lg">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.7261415076!2d50.19808881503!3d26.29080898341711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e674f71ad58d%3A0x5af3c1f3c3c8f0f0!2sKing%20Saud%20St%2C%20Al%20Khobar%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
               width="100%"
@@ -299,6 +300,7 @@ export default function ContactPage() {
         </div>
       </section>
       <Footer />
+      </div>
     </main>
   )
 }

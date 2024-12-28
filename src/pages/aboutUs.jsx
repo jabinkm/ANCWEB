@@ -117,9 +117,10 @@ const certifications = [
 
 export default function AboutUs() {
   return (
-    <main className="flex flex-col min-h-screen overflow-x-hidden">
+    <main className="flex flex-col min-h-screen">
       <TopHeader />
       <Navigation />
+      <div className="overflow-x-hidden">
       {/* Hero Section */}
       <div className="relative h-[500px] bg-black">
         <img
@@ -162,7 +163,7 @@ export default function AboutUs() {
             {statistics.map((stat, index) => (
               <div key={index} className="text-center shadow-2xl rounded-lg py-8">
                 <div className="mb-2">
-                  <span className="text-red-600 text-5xl font-bold">
+                  <span className="text-red-500 text-5xl font-bold">
                     {stat.number}
                   </span>
                 </div>
@@ -330,6 +331,7 @@ export default function AboutUs() {
         </div>
       </section>
       <Footer />
+      </div>
     </main>
   );
 }
