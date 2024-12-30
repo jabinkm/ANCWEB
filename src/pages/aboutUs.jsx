@@ -74,7 +74,7 @@ const coreValues = [
 
 const directors = [
   {
-    image: "images/AhmedYoosuf.png",
+    image: "images/AhmedYoosuf.jpg",
     name: "Ahmed Yoosuf Al Nujaidhi",
     title: "CEO",
     description:

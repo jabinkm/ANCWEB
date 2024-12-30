@@ -33,8 +33,6 @@ const divisionsMenu = [
   {
     title: "INDUSTRIAL MATERIALS SUPPLY",
     subMenu: [
-      "",
-      ""
     ]
   },
 
@@ -158,9 +156,11 @@ export function Navigation() {
             </Typography>
           </ul>
         </div>
+        <Link to={"/contact-us"}>
         <Button className="hidden lg:inline-block bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300">
           GET A QUOTE
         </Button>
+        </Link>
         <IconButton
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -225,9 +225,11 @@ export function Navigation() {
             </Link>
           </Typography>
         </ul>
+        <Link to={"/contact-us"}>
         <Button className="mb-2 bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 mt-4 transition duration-300">
           GET A QUOTE
         </Button>
+        </Link>
       </Collapse>
     </Navbar>
   )

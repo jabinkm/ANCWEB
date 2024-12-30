@@ -31,7 +31,7 @@ export default function OurClients() {
         <Typography variant="h3" className="text-center mb-8">
           Our Clients
         </Typography>
-        <div className="relative overflow-x-scroll">
+        <div className="relative">
           <div className="flex animate-scroll gap-16">
             {[...clients, ...clients].map((client, index) => (
               <div key={index} className="flex-shrink-0 w-64 mx-4">

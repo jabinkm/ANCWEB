@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { TopHeader } from '../components/top-header'
-import { Navigation } from '../components/navigationHome'
 import { Hero } from '../components/hero'
 import { About } from '../components/about'
 import { Services } from '../components/services'
@@ -10,6 +9,7 @@ import { Contact } from '../components/contact'
 import { Footer } from '../components/footer'
 import IsoCertificate from '../components/isoCertificate'
 import OurClients from '../components/ourClients'
+import { Navigation } from '../components/navigationHome'
 
 export default function Home() {
   useEffect(() => {
