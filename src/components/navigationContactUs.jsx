@@ -8,6 +8,7 @@ import React from 'react';
 const divisionsMenu = [
     {
         title: "MECHANICAL DIVISION (MED)",
+        link: "/mechanical-division",
         subMenu: [
           "PIPING",
           "EQUIPMENT ERECTION",
@@ -51,7 +52,9 @@ function DivisionsMenu() {
         {divisionsMenu.map((division, index) => (
           <Menu key={index} placement="right-start">
             <MenuHandler>
+                <Link to={division.link}>
               <MenuItem>{division.title}</MenuItem>
+              </Link>
             </MenuHandler>
             <MenuList>
               {division.subMenu.map((item, subIndex) => (
@@ -73,9 +76,11 @@ function MobileDivisionsMenu() {
       </Typography>
       {divisionsMenu.map((division, index) => (
         <div key={index} className="pl-3 mt-1">
+            <Link to={division.link}>
           <Typography variant="small" color="blue-gray" className="font-medium">
             {division.title}
           </Typography>
+          </Link>
           <ul className="pl-3">
             {division.subMenu.map((item, subIndex) => (
               <li key={subIndex}>

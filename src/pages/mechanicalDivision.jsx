@@ -5,14 +5,14 @@ import {
     Button,
   } from "@material-tailwind/react";
 import { TopHeader } from "../components/top-header";
-import { Navigation } from "../components/navigationProjects";
 import { Footer } from "../components/footer";
+import { Navigation } from "../components/navigationOurServices";
   
   const services = [
     {
-      title: "MECHANICAL INSULATION",
-      description: "Our mechanical insulation services provide effective thermal management solutions for industrial and commercial facilities.",
-      image: "/images/services/mechanical.jpg",
+      title: "PIPING",
+      description: "Our mechanical division provides effective piping solutions for industrial and commercial facilities, ensuring reliability and efficiency.",
+      image: "images/piping.avif",
       features: [
         "Industrial Equipment",
         "Process Piping and Equipment",
@@ -20,84 +20,57 @@ import { Footer } from "../components/footer";
       ]
     },
     {
-      title: "INDUSTRIAL INSULATION",
-      description: "We provide comprehensive industrial insulation consulting & design services to help you achieve maximum efficiency and cost-effectiveness.",
-      image: "/images/services/industrial.jpg",
+      title: "EQUIPMENT ERECTION",
+      description: "We offer comprehensive equipment erection services, ensuring precise installation and alignment of industrial machinery and structures.",
+      image: "images/mechanical-equipment-erection.jpg",
       features: [
-        "Process Applications",
-        "Storage Tank Insulation",
-        "Advanced Energy Solutions"
+        "Heavy Machinery Installation",
+        "Structural Assembly",
+        "Precision Alignment"
       ]
     },
     {
-      title: "COMMERCIAL INSULATION",
-      description: "Our commercial insulation solutions help reduce energy costs and maintain comfortable environments in commercial buildings.",
-      image: "/images/services/commercial.jpg",
+      title: "STEEL STRUCTURE FABRICATION AND ERECTION",
+      description: "Our expertise in steel structure fabrication and erection ensures robust and durable constructions for various industrial applications.",
+      image: "images/Steel-Structure-Fabrication.jpg",
       features: [
-        "HVAC and Plumbing Systems",
-        "Building Insulation",
-        "Energy Conservation Solutions"
+        "Custom Steel Fabrication",
+        "On-site Assembly",
+        "Quality Assurance"
       ]
     },
     {
-      title: "DUCT INSULATION",
-      description: "We specialize in providing cost-effective ducting solutions, offering a full range of services from design and fabrication to installation and maintenance.",
-      image: "/images/services/duct.jpg",
+      title: "PRE ENGINEERED BUILDINGS",
+      description: "We specialize in pre-engineered buildings, offering cost-effective and efficient solutions for industrial and commercial spaces.",
+      image: "images/pre-engineered-building.jpg",
       features: [
-        "Commercial/Industrial HVAC Ducting",
-        "Ventilation Systems",
-        "Technical Consulting",
-        "Installation Services"
+        "Design and Engineering",
+        "Quick Installation",
+        "Cost-effective Solutions"
       ]
     },
     {
-      title: "PIPE INSULATION",
-      description: "Our pipe insulation solutions provide thermal efficiency, condensation control, and protection for various piping systems.",
-      image: "/images/services/pipe.jpg",
+      title: "VALVES AND INSTRUMENTS",
+      description: "Our services include the supply and installation of high-quality valves and instruments for precise control and monitoring of industrial processes.",
+      image: "/images/valves.jpg",
       features: [
-        "Chilled Water Distribution Systems",
-        "Hot Water and Heating Hot Water Pipes",
-        "Steam and Condensate Lines"
-      ]
-    },
-    {
-      title: "EQUIPMENT INSULATION",
-      description: "Comprehensive equipment insulation solutions for a wide range of industrial applications.",
-      image: "/images/services/equipment.jpg",
-      features: [
-        "Boilers",
-        "Generators",
-        "Heat Exchangers",
-        "Vessels",
-        "Tanks",
-        "Turbines",
-        "Industrial Equipment",
-        "Mechanical Systems & Process Piping"
-      ]
-    },
-    {
-      title: "FABRICATION",
-      description: "We provide custom fabrication solutions for all mechanical and process applications. Our fabrication is done in a state-of-the-art facility by experienced craftsmen.",
-      image: "/images/services/fabrication.jpg",
-      features: [
-        "Custom Covers",
-        "Removable Pads",
-        "Metal Jacketing",
-        "Vessels"
+        "Wide Range of Valves",
+        "Instrumentation Solutions",
+        "Installation and Maintenance"
       ]
     }
   ];
   
-  const partners = [
-    { name: "Partner 1", logo: "/images/partners/logo1.png" },
-    { name: "Partner 2", logo: "/images/partners/logo2.png" },
-    { name: "Partner 3", logo: "/images/partners/logo3.png" },
-    { name: "Partner 4", logo: "/images/partners/logo4.png" },
-  ];
+  // const partners = [
+  //   { name: "Partner 1", logo: "/images/partners/logo1.png" },
+  //   { name: "Partner 2", logo: "/images/partners/logo2.png" },
+  //   { name: "Partner 3", logo: "/images/partners/logo3.png" },
+  //   { name: "Partner 4", logo: "/images/partners/logo4.png" },
+  // ];
   
   export default function Services() {
     return (
-      <div className="min-h-screen">\
+      <div className="min-h-screen">
       <TopHeader />
       <Navigation />
         {/* Hero Section */}
@@ -105,22 +78,22 @@ import { Footer } from "../components/footer";
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{
-              backgroundImage: "url('/images/services/hero-bg.jpg')",
+              backgroundImage: "url('/images/mechanical.png')",
             }}
           >
             <div className="absolute inset-0 bg-black/70" />
           </div>
           <div className="relative container mx-auto h-full flex flex-col justify-center px-4">
             <Typography variant="h1" className="text-white text-4xl md:text-6xl font-bold max-w-4xl">
-              SPECIALIZED INSULATION SERVICES FOR EVERY PROJECT
+              SPECIALIZED MECHANICAL SERVICES FOR EVERY PROJECT
             </Typography>
             <Typography className="text-gray-300 mt-4 max-w-2xl">
-              Working with the highest engineered specifications. From pipes and industrial equipment to HVAC systems and storage tanks.
+              Working with the highest engineered specifications.
             </Typography>
           </div>
         </div>
   
-        {/* Partners Section */}
+        {/* Partners Section
         <div className="bg-white py-8 border-b">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center items-center gap-8">
@@ -135,11 +108,11 @@ import { Footer } from "../components/footer";
             </div>
           </div>
         </div>
-  
+   */}
         {/* Services Section */}
         <div className="container mx-auto px-4 py-16">
           <Typography variant="h2" className="text-3xl font-bold mb-12 text-center">
-            OUR INSULATION SOLUTIONS
+            OUR MECHANICAL DIVISION
           </Typography>
   
           <div className="space-y-16">

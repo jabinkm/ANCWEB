@@ -4,7 +4,7 @@ import AboutUs from "../pages/aboutUs";
 import ContactPage from "../pages/contactUs";
 import Projects from "../pages/projects";
 import PipeColdCutting from "../pages/pipeColdCutting";
-import Services from "../pages/ourServices";
+import Services from "../pages/mechanicalDivision";
 
 
 export default function UserRoute() {
@@ -16,7 +16,7 @@ export default function UserRoute() {
       <Route path="projects" element={<Projects />} />
       <Route path="pipe-cold-cutting" element={<PipeColdCutting />} />
       <Route path="*" element={<Home />} />
-      <Route path="our-services" element={<Services />} />
+      <Route path="mechanical-division" element={<Services />} />
     </Routes>
   );
 }

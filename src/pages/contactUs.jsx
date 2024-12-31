@@ -293,7 +293,8 @@ export default function ContactPage() {
           <Typography variant="h3" className="text-center mb-8">Our Location</Typography>
           <div className="md:h-[500px] h-[300px] w-full rounded-lg overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.7261415076!2d50.19808881503!3d26.29080898341711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e674f71ad58d%3A0x5af3c1f3c3c8f0f0!2sKing%20Saud%20St%2C%20Al%20Khobar%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7149.827966662883!2d50.19128913166594!3d26.36164398453393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDIxJzQyLjEiTiA1MMKwMTEnNDEuNCJF!5e0!3m2!1sen!2ssa!4v1735634917663!5m2!1sen!2ssa"
+            //   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3576.7261415076!2d50.19808881503!3d26.29080898341711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e674f71ad58d%3A0x5af3c1f3c3c8f0f0!2sKing%20Saud%20St%2C%20Al%20Khobar%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}

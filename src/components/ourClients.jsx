@@ -32,7 +32,7 @@ export default function OurClients() {
           Our Clients
         </Typography>
         <div className="relative">
-          <div className="flex animate-scroll gap-16">
+          <div className="flex animate-scroll-fast hover:animate-scroll gap-16">
             {[...clients, ...clients].map((client, index) => (
               <div key={index} className="flex-shrink-0 w-64 mx-4">
                 <img
