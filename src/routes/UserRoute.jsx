@@ -5,6 +5,8 @@ import ContactPage from "../pages/contactUs";
 import Projects from "../pages/projects";
 import PipeColdCutting from "../pages/pipeColdCutting";
 import Services from "../pages/mechanicalDivision";
+import SSD from "../pages/specialityServiceDivision";
+import MED from "../pages/mechanicalDivision";
 
 
 export default function UserRoute() {
@@ -16,7 +18,8 @@ export default function UserRoute() {
       <Route path="projects" element={<Projects />} />
       <Route path="pipe-cold-cutting" element={<PipeColdCutting />} />
       <Route path="*" element={<Home />} />
-      <Route path="mechanical-division" element={<Services />} />
+      <Route path="mechanical-division" element={<MED />} />
+      <Route path="speciality-service-division" element={<SSD />} />
     </Routes>
   );
 }

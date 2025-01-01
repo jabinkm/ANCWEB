@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Typography, Button } from "@material-tailwind/react";
 import { Navigation } from '../components/navigationProjects';
 import { TopHeader } from '../components/top-header';
@@ -88,6 +88,9 @@ const projects = [
 ];
 
 export default function Projects() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   const [activeCategory, setActiveCategory] = useState('all');
 
   const filteredProjects = activeCategory === 'all'

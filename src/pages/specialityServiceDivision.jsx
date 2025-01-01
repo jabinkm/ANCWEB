@@ -7,57 +7,82 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
-    title: "PIPING",
+    title: "THERMAL AND ACOUSTIC INSULATION",
+    // sublink: "/thermal-and-acoustic-insulation",
     description:
-      "Our mechanical division provides effective piping solutions for industrial and commercial facilities, ensuring reliability and efficiency.",
-    image: "images/piping.avif",
+      "We provide top-notch thermal and acoustic insulation services to enhance energy efficiency and reduce noise pollution in industrial and commercial settings.",
+    image: "images/specialityService.webp",
     features: [
-      "Industrial Equipment",
-      "Process Piping and Equipment",
-      "Energy Efficiency Solutions",
+      "High-Performance Insulation Materials",
+      "Noise Reduction Solutions",
+      "Energy Saving Techniques",
     ],
   },
   {
-    title: "EQUIPMENT ERECTION",
+    title: "COATING & PAINTING",
+    // sublink: "/coating-and-painting",
     description:
-      "We offer comprehensive equipment erection services, ensuring precise installation and alignment of industrial machinery and structures.",
-    image: "images/mechanical-equipment-erection.jpg",
+      "Our coating and painting services protect your structures and equipment from corrosion, wear, and environmental damage, ensuring longevity and durability.",
+    image: "images/painting.jpg",
     features: [
-      "Heavy Machinery Installation",
-      "Structural Assembly",
-      "Precision Alignment",
+      "Anti-Corrosion Coatings",
+      "Industrial Painting",
+      "Surface Preparation",
     ],
   },
   {
-    title: "STEEL STRUCTURE FABRICATION AND ERECTION",
+    title: "FIREPROOFING",
+    // sublink: "/fireproofing",
     description:
-      "Our expertise in steel structure fabrication and erection ensures robust and durable constructions for various industrial applications.",
-    image: "images/Steel-Structure-Fabrication.jpg",
+      "We offer comprehensive fireproofing solutions to safeguard your facilities and assets from fire hazards, complying with safety standards and regulations.",
+    image: "images/fireproofing.jpg",
     features: [
-      "Custom Steel Fabrication",
-      "On-site Assembly",
-      "Quality Assurance",
+      "Intumescent Coatings",
+      "Cementitious Fireproofing",
+      "Firestop Systems",
     ],
   },
   {
-    title: "PRE ENGINEERED BUILDINGS",
+    title: "SCAFFOLDING SERVICES",
     description:
-      "We specialize in pre-engineered buildings, offering cost-effective and efficient solutions for industrial and commercial spaces.",
-    image: "images/pre-engineered-building.jpg",
+      "Our scaffolding services provide safe and reliable access solutions for construction, maintenance, and repair projects, ensuring worker safety and project efficiency.",
+    image: "images/scaffolding.jpg",
     features: [
-      "Design and Engineering",
-      "Quick Installation",
-      "Cost-effective Solutions",
+      "Custom Scaffolding Design",
+      "Erection and Dismantling",
+      "Safety Inspections",
     ],
   },
   {
-    title: "VALVES AND INSTRUMENTS",
+    title: "REFRACTORY WORKS",
     description:
-      "Our services include the supply and installation of high-quality valves and instruments for precise control and monitoring of industrial processes.",
-    image: "/images/valves1.jpg",
+      "We specialize in refractory works, offering installation and maintenance of high-temperature resistant materials for furnaces, kilns, and other industrial applications.",
+    image: "/images/refractory.jpeg",
     features: [
-      "Wide Range of Valves",
-      "Instrumentation Solutions",
+      "Refractory Lining Installation",
+      "Maintenance and Repair",
+      "High-Temperature Solutions",
+    ],
+  },
+  {
+    title: "WATER PROOFING",
+    description:
+      "Our waterproofing services protect your structures from water damage, ensuring durability and longevity in various environmental conditions.",
+    image: "/images/waterproofing.jpg",
+    features: [
+      "Membrane Waterproofing",
+      "Cementitious Waterproofing",
+      "Leak Detection and Repair",
+    ],
+  },
+  {
+    title: "ELECTRICAL HEAT TRACING",
+    description:
+      "We provide electrical heat tracing solutions to maintain process temperatures, prevent freezing, and ensure efficient operation of pipelines and equipment.",
+    image: "/images/electricalHeatTracing.jpg",
+    features: [
+      "Self-Regulating Heating Cables",
+      "Control and Monitoring Systems",
       "Installation and Maintenance",
     ],
   },
@@ -70,7 +95,7 @@ const services = [
 //   { name: "Partner 4", logo: "/images/partners/logo4.png" },
 // ];
 
-export default function MED() {
+export default function SSD() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -83,7 +108,7 @@ export default function MED() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/images/mechanical.png')",
+            backgroundImage: "url('/images/specialityServices.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-black/70" />
@@ -93,7 +118,7 @@ export default function MED() {
             variant="h1"
             className="text-white text-4xl md:text-6xl font-bold max-w-4xl"
           >
-            SPECIALIZED MECHANICAL SERVICES FOR EVERY PROJECT
+            SPECIALITY SERVICE DIVISION FOR EVERY PROJECT
           </Typography>
           <Typography className="text-gray-300 mt-4 max-w-2xl">
             Working with the highest engineered specifications.
@@ -123,7 +148,7 @@ export default function MED() {
           variant="h2"
           className="text-3xl font-bold mb-12 text-center"
         >
-          OUR MECHANICAL DIVISION
+          OUR SPECIALITY SERVICE DIVISION
         </Typography>
 
         <div className="space-y-16">
@@ -147,10 +172,10 @@ export default function MED() {
                   ))}
                 </ul>
                 <Link to={service.sublink}>
-                  <Button className="lg:inline-block bg-blue-gray-200 text-red-500 hover:text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300 mt-8 ml-8">
-                    view more
-                  </Button>
-                </Link>
+                <Button className="lg:inline-block bg-blue-gray-200 text-red-500 hover:text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300 mt-8 ml-8">
+                  view more
+                </Button>
+              </Link>
               </div>
               <div className={index % 2 === 0 ? "" : "md:order-first"}>
                 <img
@@ -159,6 +184,7 @@ export default function MED() {
                   className="w-full h-[300px] object-cover rounded-lg shadow-lg"
                 />
               </div>
+              
             </div>
           ))}
         </div>
@@ -173,11 +199,11 @@ export default function MED() {
             to your projects:
           </Typography>
           <ul className="list-disc list-inside space-y-2 text-gray-600">
-            <li>Initial Site Assessment</li>
-            <li>Budget and planning services</li>
-            <li>Project Management</li>
-            <li>Ongoing Maintenance Plans</li>
-            <li>Energy Optimization</li>
+            {/* <li>Initial Site Assessment</li>
+              <li>Budget and planning services</li>
+              <li>Project Management</li>
+              <li>Ongoing Maintenance Plans</li>
+              <li>Energy Optimization</li> */}
           </ul>
         </div>
       </div>

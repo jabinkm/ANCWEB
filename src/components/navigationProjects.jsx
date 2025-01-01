@@ -20,6 +20,7 @@ const divisionsMenu = [
     
       {
         title: "SPECIALITY SERVICE DIVISION (SSD)",
+        link: "/speciality-service-division",
         subMenu: [
           "THERMAL & ACOUSTIC INSULATION",
           "COATING & PAINTING",
@@ -198,7 +199,7 @@ export function Navigation() {
             color="blue-gray"
             className="p-1 font-normal"
           >
-            <Link to={"#about"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+            <Link to={"/about-us"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
               ABOUT US
             </Link>
           </Typography>

@@ -25,9 +25,9 @@
   }
   
   .animate-scroll {
-    animation: scroll 10s linear infinite;
+    animation: scroll 80s linear infinite;
   }
   
   .animate-scroll-fast {
-    animation: scroll 30s linear infinite; /* Doubled the speed by halving the duration */
+    animation: scroll 40s linear infinite; /* Doubled the speed by halving the duration */
   }

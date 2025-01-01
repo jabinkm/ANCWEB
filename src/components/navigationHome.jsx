@@ -20,6 +20,7 @@ const divisionsMenu = [
 
   {
     title: "SPECIALITY SERVICE DIVISION (SSD)",
+    link: "/speciality-service-division",
     subMenu: [
       "THERMAL & ACOUSTIC INSULATION",
       "COATING & PAINTING",
