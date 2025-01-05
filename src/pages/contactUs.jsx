@@ -101,7 +101,7 @@ export default function ContactPage() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('images/contactBanner.png')",
+            backgroundImage: "url('/images/contactBanner.png')",
           }}
         >
           <div className="absolute inset-0 bg-black/50" />

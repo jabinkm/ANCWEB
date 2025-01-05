@@ -17,7 +17,7 @@ const projects = [
     id: 1,
     title: "Material Engineering",
     description: "Developing more efficient material eng",
-    image: "images/MaterialEngineer.jpg",
+    image: "/images/MaterialEngineer.jpg",
     categories: ["Material", "Engineering"],
     type: "insulation"
   },
@@ -25,7 +25,7 @@ const projects = [
     id: 2,
     title: "IUT Bank Building",
     description: "Developing more efficient material eng",
-    image: "images/bank.jpg",
+    image: "/images/bank.jpg",
     categories: ["Material", "Engineering"],
     type: "pipe"
   },
@@ -33,7 +33,7 @@ const projects = [
     id: 3,
     title: "Wind Energy Plant",
     description: "Developing more efficient material eng",
-    image: "images/wind-energy.jpg",
+    image: "/images/wind-energy.jpg",
     categories: ["Material", "Engineering"],
     type: "trading"
   },
@@ -41,7 +41,7 @@ const projects = [
     id: 4,
     title: "Office Building",
     description: "Developing more efficient material eng",
-    image: "images/office.jpg",
+    image: "/images/office.jpg",
     categories: ["Material", "Engineering"],
     type: "support"
   },
@@ -106,7 +106,7 @@ export default function Projects() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('images/projects.png')",
+            backgroundImage: "url('/images/projects.png')",
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
@@ -314,7 +314,7 @@ export default function Projects() {
 //         <div 
 //           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
 //           style={{
-//             backgroundImage: "url('images/oilRefinaryCoating.jpg')",
+//             backgroundImage: "url('/images/oilRefinaryCoating.jpg')",
 //           }}
 //         >
 //           <div className="absolute inset-0 bg-black/50" />

@@ -4,22 +4,22 @@ import { Card, CardHeader, CardBody, Typography } from "@material-tailwind/react
 const projects = [
   {
     title: 'Industrial Plant Insulation',
-    image: 'images/industrialPlantInsulation.avif',
+    image: '/images/industrialPlantInsulation.avif',
     description: 'Comprehensive thermal insulation for a large industrial plant in Jubail.',
   },
   {
     title: 'Oil Refinery Coating',
-    image: 'images/oilRefinaryCoating.jpg',
+    image: '/images/oilRefinaryCoating.jpg',
     description: 'Protective coating application for an oil refinery in Yanbu.',
   },
   {
     title: 'Commercial Building HVAC',
-    image: 'images/CommercialHVAC.jpeg',
+    image: '/images/CommercialHVAC.jpeg',
     description: 'HVAC insulation for a high-rise commercial building in Riyadh.',
   },
   {
     title: 'Pipeline Heat Tracing',
-    image: 'images/EHT.jpg',
+    image: '/images/EHT.jpg',
     description: 'Electric heat tracing system for a long-distance pipeline project.',
   },
 ]

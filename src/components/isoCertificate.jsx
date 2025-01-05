@@ -23,17 +23,17 @@ export default function IsoCertificate() {
               {
                 name: "ISO 9001:2015",
                 description: "Quality Management System",
-                image: "images/iso3.png",
+                image: "/images/iso9001.png",
               },
               {
                 name: "ISO 14001:2015",
                 description: "Environmental Management System",
-                image: "images/iso2.png",
+                image: "/images/iso14001.png",
               },
               {
                 name: "ISO 45001:2018",
                 description: "Occupational Health and Safety Management System",
-                image: "images/iso1.png",
+                image: "/images/iso45001.png",
               },
             ].map((cert, index) => (
               <Card key={index} className="mt-6 w-96">

@@ -4,11 +4,13 @@ import { Footer } from "../components/footer";
 import { Navigation } from "../components/navigationOurServices";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const services = [
   {
     title: "THERMAL AND ACOUSTIC INSULATION",
-    // sublink: "/thermal-and-acoustic-insulation",
+    // sublink: "/speciality-service-division/thermal-and-acoustic-insulation",
     description:
       "We provide top-notch thermal and acoustic insulation services to enhance energy efficiency and reduce noise pollution in industrial and commercial settings.",
     image: "images/specialityService.webp",
@@ -20,7 +22,7 @@ const services = [
   },
   {
     title: "COATING & PAINTING",
-    // sublink: "/coating-and-painting",
+    // sublink: "/speciality-service-division/coating-and-painting",
     description:
       "Our coating and painting services protect your structures and equipment from corrosion, wear, and environmental damage, ensuring longevity and durability.",
     image: "images/painting.jpg",
@@ -32,10 +34,10 @@ const services = [
   },
   {
     title: "FIREPROOFING",
-    // sublink: "/fireproofing",
+    // sublink: "/speciality-service-division/fireproofing",
     description:
       "We offer comprehensive fireproofing solutions to safeguard your facilities and assets from fire hazards, complying with safety standards and regulations.",
-    image: "images/fireproofing.jpg",
+    image: "/images/fireproofing.jpg",
     features: [
       "Intumescent Coatings",
       "Cementitious Fireproofing",
@@ -46,7 +48,7 @@ const services = [
     title: "SCAFFOLDING SERVICES",
     description:
       "Our scaffolding services provide safe and reliable access solutions for construction, maintenance, and repair projects, ensuring worker safety and project efficiency.",
-    image: "images/scaffolding.jpg",
+    image: "/images/scaffolding.jpg",
     features: [
       "Custom Scaffolding Design",
       "Erection and Dismantling",
@@ -88,23 +90,51 @@ const services = [
   },
 ];
 
-// const partners = [
-//   { name: "Partner 1", logo: "/images/partners/logo1.png" },
-//   { name: "Partner 2", logo: "/images/partners/logo2.png" },
-//   { name: "Partner 3", logo: "/images/partners/logo3.png" },
-//   { name: "Partner 4", logo: "/images/partners/logo4.png" },
-// ];
+function AnimatedSection({ children }) {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  return (
+    <motion.div
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 50 },
+      }}
+      transition={{ duration: 0.5 }}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 export default function SSD() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="min-h-screen">
       <TopHeader />
       <Navigation />
       {/* Hero Section */}
-      <div className="relative h-[500px] bg-black">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative h-[500px] bg-black"
+      >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
@@ -114,98 +144,130 @@ export default function SSD() {
           <div className="absolute inset-0 bg-black/70" />
         </div>
         <div className="relative container mx-auto h-full flex flex-col justify-center px-4">
-          <Typography
-            variant="h1"
-            className="text-white text-4xl md:text-6xl font-bold max-w-4xl"
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
           >
-            SPECIALITY SERVICE DIVISION FOR EVERY PROJECT
-          </Typography>
-          <Typography className="text-gray-300 mt-4 max-w-2xl">
-            Working with the highest engineered specifications.
-          </Typography>
+            <Typography
+              variant="h1"
+              className="text-white text-4xl md:text-6xl font-bold max-w-4xl"
+            >
+              SPECIALITY SERVICE DIVISION FOR EVERY PROJECT
+            </Typography>
+          </motion.div>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
+          >
+            <Typography className="text-gray-300 mt-4 max-w-2xl">
+              Working with the highest engineered specifications.
+            </Typography>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Partners Section
-        <div className="bg-white py-8 border-b">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center items-center gap-8">
-              {partners.map((partner, index) => (
-                <img
-                  key={index}
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="h-12 object-contain grayscale hover:grayscale-0 transition-all"
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-   */}
       {/* Services Section */}
       <div className="container mx-auto px-4 py-16">
-        <Typography
-          variant="h2"
-          className="text-3xl font-bold mb-12 text-center"
-        >
-          OUR SPECIALITY SERVICE DIVISION
-        </Typography>
+        <AnimatedSection>
+          <Typography
+            variant="h2"
+            className="text-3xl font-bold mb-12 text-center"
+          >
+            OUR SPECIALITY SERVICE DIVISION
+          </Typography>
+        </AnimatedSection>
 
         <div className="space-y-16">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className={`grid md:grid-cols-2 gap-8 items-center ${
-                index % 2 === 0 ? "" : "md:grid-flow-dense"
-              }`}
-            >
-              <div className={index % 2 === 0 ? "md:pr-8" : "md:pl-8"}>
-                <Typography variant="h3" className="text-2xl font-bold mb-4">
-                  {service.title}
-                </Typography>
-                <Typography className="text-gray-700 mb-4">
-                  {service.description}
-                </Typography>
-                <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex}>{feature}</li>
-                  ))}
-                </ul>
-                <Link to={service.sublink}>
-                <Button className="lg:inline-block bg-blue-gray-200 text-red-500 hover:text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300 mt-8 ml-8">
-                  view more
-                </Button>
-              </Link>
+            <AnimatedSection key={index}>
+              <div
+                className={`grid md:grid-cols-2 gap-8 items-center ${
+                  index % 2 === 0 ? "" : "md:grid-flow-dense"
+                }`}
+              >
+                <div className={index % 2 === 0 ? "md:pr-8" : "md:pl-8"}>
+                  <Typography variant="h3" className="text-2xl font-bold mb-4">
+                    {service.title}
+                  </Typography>
+                  <Typography className="text-gray-700 mb-4">
+                    {service.description}
+                  </Typography>
+                  <ul className="list-disc list-inside space-y-2 text-gray-600">
+                    {service.features.map((feature, featureIndex) => (
+                      <motion.li
+                        key={featureIndex}
+                        initial={{ x: 20, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{
+                          delay: 0.1 * featureIndex,
+                          duration: 0.5,
+                        }}
+                      >
+                        {feature}
+                      </motion.li>
+                    ))}
+                  </ul>
+                  <motion.div
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                  >
+                    <Link to={service.sublink}>
+                      <Button className="lg:inline-block bg-blue-gray-200 text-red-500 hover:text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300 mt-8 ml-8">
+                        view more
+                      </Button>
+                    </Link>
+                  </motion.div>
+                </div>
+                <motion.div
+                  className={index % 2 === 0 ? "" : "md:order-first"}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.8 }}
+                >
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-[300px] object-cover rounded-lg shadow-lg"
+                  />
+                </motion.div>
               </div>
-              <div className={index % 2 === 0 ? "" : "md:order-first"}>
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-[300px] object-cover rounded-lg shadow-lg"
-                />
-              </div>
-              
-            </div>
+            </AnimatedSection>
           ))}
         </div>
 
         {/* Other Resources Section */}
-        <div className="mt-16">
-          <Typography variant="h3" className="text-2xl font-bold mb-4">
-            OTHER RESOURCES
-          </Typography>
-          <Typography className="text-gray-700 mb-4">
-            Beyond our core services, we offer valuable resources to add value
-            to your projects:
-          </Typography>
-          <ul className="list-disc list-inside space-y-2 text-gray-600">
-            {/* <li>Initial Site Assessment</li>
-              <li>Budget and planning services</li>
-              <li>Project Management</li>
-              <li>Ongoing Maintenance Plans</li>
-              <li>Energy Optimization</li> */}
-          </ul>
-        </div>
+        <AnimatedSection>
+          <div className="mt-16">
+            <Typography variant="h3" className="text-2xl font-bold mb-4">
+              OTHER RESOURCES
+            </Typography>
+            <Typography className="text-gray-700 mb-4">
+              Beyond our core services, we offer valuable resources to add value
+              to your projects:
+            </Typography>
+            <ul className="list-disc list-inside space-y-2 text-gray-600">
+              {[
+                "Initial Site Assessment",
+                "Budget and planning services",
+                "Project Management",
+                "Ongoing Maintenance Plans",
+                "Energy Optimization",
+              ].map((item, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ x: 20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.1 * index, duration: 0.5 }}
+                >
+                  {item}
+                </motion.li>
+              ))}
+            </ul>
+          </div>
+        </AnimatedSection>
       </div>
       <Footer />
     </div>

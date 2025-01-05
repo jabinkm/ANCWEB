@@ -4,63 +4,84 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Navbar, Collapse, Typography, IconButton, Button, Menu, MenuHandler, MenuList, MenuItem } from "@material-tailwind/react";
 import React from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 
-const divisionsMenu = [
-    {
-        title: "MECHANICAL DIVISION (MED)",
-        link: "/mechanical-division",
-        subMenu: [
-          "PIPING",
-          "EQUIPMENT ERECTION",
-          "STEEEL STRUCTURE FABRICATION & ERECTION",
-          "PRE ENGINEERED BUILDINGS",
-          "VALVES & INSTRUMENTS"
-        ]
-      },
-    
-      {
-        title: "SPECIALITY SERVICE DIVISION (SSD)",
-        link: "/speciality-service-division",
-        subMenu: [
-          "THERMAL & ACOUSTIC INSULATION",
-          "COATING & PAINTING",
-          "FIREPROOFING",
-          "SCAFFOLDING SERVICES",
-          "REFRACTORY WORKS",
-          "WATER PROOFING",
-          "ELECTRICAL HEAT TRACING",
-        ]
-      },
-      
-      {
-        title: "INDUSTRIAL MATERIALS SUPPLY",
-        subMenu: [
-          "",
-          ""
-        ]
-      },
+const DIVISIONS_MENU = [
+  {
+    title: "MECHANICAL DIVISION (MED)",
+    link: "/mechanical-division",
+    subMenu: [
+      { name: "PIPING", path: "/mechanical-division/piping" },
+      { name: "EQUIPMENT ERECTION", path: "/mechanical-division/equipment-erection" },
+      { name: "STEEL STRUCTURE FABRICATION & ERECTION", path: "/mechanical-division/steel-structure" },
+      { name: "PRE ENGINEERED BUILDINGS", path: "/mechanical-division/pre-engineered-buildings" },
+      { name: "VALVES & INSTRUMENTS", path: "/mechanical-division/valves-and-instruments" }
+    ]
+  },
+  {
+    title: "SPECIALITY SERVICE DIVISION (SSD)",
+    link: "/speciality-service-division",
+    subMenu: [
+      { name: "THERMAL & ACOUSTIC INSULATION", path: "/speciality-service-division/thermal-acoustic-insulation" },
+      { name: "COATING & PAINTING", path: "/speciality-service-division/coating-painting" },
+      { name: "FIREPROOFING", path: "/speciality-service-division/fireproofing" },
+      { name: "SCAFFOLDING SERVICES", path: "/speciality-service-division/scaffolding" },
+      { name: "REFRACTORY WORKS", path: "/speciality-service-division/refractory" },
+      { name: "WATER PROOFING", path: "/speciality-service-division/waterproofing" },
+      { name: "ELECTRICAL HEAT TRACING", path: "/speciality-service-division/electrical-heat-tracing" },
+    ]
+  },
+  {
+    title: "INDUSTRIAL MATERIALS SUPPLY",
+    link: "/industrial-materials-supply",
+    subMenu: []
+  },
 ];
 
 function DivisionsMenu() {
+  const [openMenu, setOpenMenu] = useState(null);
+
   return (
     <Menu>
       <MenuHandler>
-        <Typography as="div" variant="small" className="font-normal cursor-pointer text-red-600 hover:text-red-600">
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Typography as="div" variant="small" className="font-normal cursor-pointer text-red-600 hover:text-red-600">
             OUR SERVICES
-        </Typography>
+          </Typography>
+        </motion.div>
       </MenuHandler>
       <MenuList className="p-1">
-        {divisionsMenu.map((division, index) => (
+        {DIVISIONS_MENU.map((division, index) => (
           <Menu key={index} placement="right-start">
             <MenuHandler>
+              <motion.div
+                whileHover={{ backgroundColor: "#f3f4f6" }}
+                transition={{ duration: 0.2 }}
+              >
                 <Link to={division.link}>
-              <MenuItem>{division.title}</MenuItem>
-              </Link>
+                  <MenuItem>{division.title}</MenuItem>
+                </Link>
+              </motion.div>
             </MenuHandler>
             <MenuList>
-              {division.subMenu.map((item, subIndex) => (
-                <MenuItem key={subIndex}>{item}</MenuItem>
-              ))}
+              <AnimatePresence>
+                {division.subMenu.map((item, subIndex) => (
+                  <motion.div
+                    key={subIndex}
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2, delay: subIndex * 0.05 }}
+                  >
+                    <MenuItem>
+                      <Link to={item.path}>{item.name}</Link>
+                    </MenuItem>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
             </MenuList>
           </Menu>
         ))}
@@ -71,29 +92,48 @@ function DivisionsMenu() {
 
 function MobileDivisionsMenu() {
   return (
-    <div className="pl-3">
+    <motion.div
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      transition={{ duration: 0.3 }}
+      className="pl-3"
+    >
       <Typography variant="small" color="red-600" className="font-medium">
         OUR SERVICES
       </Typography>
-      {divisionsMenu.map((division, index) => (
-        <div key={index} className="pl-3 mt-1">
-            <Link to={division.link}>
-          <Typography variant="small" color="blue-gray" className="font-medium">
-            {division.title}
-          </Typography>
+      {DIVISIONS_MENU.map((division, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, delay: index * 0.1 }}
+          className="pl-3 mt-1"
+        >
+          <Link to={division.link}>
+            <Typography variant="small" color="blue-gray" className="font-medium">
+              {division.title}
+            </Typography>
           </Link>
           <ul className="pl-3">
             {division.subMenu.map((item, subIndex) => (
-              <li key={subIndex}>
-                <Typography variant="small" color="gray" className="font-normal">
-                  {item}
-                </Typography>
-              </li>
+              <motion.li
+                key={subIndex}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.2, delay: subIndex * 0.05 }}
+              >
+                <Link to={item.path}>
+                  <Typography variant="small" color="gray" className="font-normal">
+                    {item.name}
+                  </Typography>
+                </Link>
+              </motion.li>
             ))}
           </ul>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 
@@ -101,72 +141,93 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-
     <Navbar className="sticky top-0 z-50 max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
-        <img
-          src="images/anc-full-removebg.png"
+        <motion.img
+          src="/images/anc-full-removebg.png"
           alt="ANC Logo"
           width={200}
           height={60}
-          className="sm:h-12 w-auto"
+          className="h-12 w-auto"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         />
         <div className="hidden lg:block">
-          <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-            <Typography
-              as="li"
-              variant="small"
-              color="blue-gray"
-              className="p-1 font-normal"
-            >
-              <Link to={"/"} className="flex items-center text-gray-700 hover:text-red-600">
-                HOME
-              </Link>
-            </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="blue-gray"
-              className="p-1 font-normal"
-            >
-              <Link to={"/about-us"} className="flex items-center text-gray-700 hover:text-red-600">
-                ABOUT US
-              </Link>
-            </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="blue-gray"
-              className="p-1 font-normal"
-            >
-              <DivisionsMenu />
-            </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="blue-gray"
-              className="p-1 font-normal"
-            >
-              <Link to={"/projects"} className="flex items-center text-gray-700 hover:text-red-600">
-                PROJECTS
-              </Link>
-            </Typography>
-            <Typography
-              as="li"
-              variant="small"
-              color="blue-gray"
-              className="p-1 font-normal"
-            >
-              <Link to={"/contact-us"} className="flex items-center text-gray-700 hover:text-red-600">
-                CONTACT US
-              </Link>
-            </Typography>
-          </ul>
+          <motion.ul
+            className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Typography
+                as="div"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal"
+              >
+                <Link to={"/"} className="flex items-center text-gray-700 font-medium">
+                  HOME
+                </Link>
+              </Typography>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Typography
+                as="div"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal"
+              >
+                <Link to={"/about-us"} className="flex items-center text-gray-700 hover:text-red-600">
+                  ABOUT US
+                </Link>
+              </Typography>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Typography
+                as="div"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal"
+              >
+                <DivisionsMenu />
+              </Typography>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Typography
+                as="div"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal"
+              >
+                <Link to={"/projects"} className="flex items-center text-gray-700 hover:text-red-600">
+                  PROJECTS
+                </Link>
+              </Typography>
+            </motion.li>
+            <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Typography
+                as="div"
+                variant="small"
+                color="blue-gray"
+                className="p-1 font-normal"
+              >
+                <Link to={"/contact-us"} className="flex items-center text-gray-700 hover:text-red-600">
+                  CONTACT US
+                </Link>
+              </Typography>
+            </motion.li>
+          </motion.ul>
         </div>
         <Link to={"/contact-us"}>
-        <Button className="hidden lg:inline-block bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300">
-          GET A QUOTE
-        </Button>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Button className="hidden lg:inline-block bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300">
+              GET A QUOTE
+            </Button>
+          </motion.div>
         </Link>
         <IconButton
           variant="text"
@@ -181,63 +242,80 @@ export function Navigation() {
           )}
         </IconButton>
       </div>
-      <Collapse open={isOpen}>
-        <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-          <Typography
-            as="li"
-            variant="small"
-            color="blue-gray"
-            className="p-1 font-normal"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            <Link to={"/"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
-              HOME
-            </Link>
-          </Typography>
-          <Typography
-            as="li"
-            variant="small"
-            color="blue-gray"
-            className="p-1 font-normal"
-          >
-            <Link to={"/about-us"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
-              ABOUT US
-            </Link>
-          </Typography>
-          <Typography
-            as="li"
-            variant="small"
-            color="blue-gray"
-            className="p-1 font-normal"
-          >
-            <MobileDivisionsMenu />
-          </Typography>
-          <Typography
-            as="li"
-            variant="small"
-            color="blue-gray"
-            className="p-1 font-normal"
-          >
-            <Link to={"/projects"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
-              PROJECTS
-            </Link>
-          </Typography>
-          <Typography
-            as="li"
-            variant="small"
-            color="blue-gray"
-            className="p-1 font-normal"
-          >
-            <Link to={"/contact-us"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
-              CONTACT US
-            </Link>
-          </Typography>
-        </ul>
-        <Link to={"/contact-us"}>
-        <Button className="mb-2 bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 mt-4 transition duration-300">
-          GET A QUOTE
-        </Button>
-        </Link>
-      </Collapse>
+            <Collapse open={isOpen}>
+              <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+                <Typography
+                  as="li"
+                  variant="small"
+                  color="blue-gray"
+                  className="p-1 font-normal"
+                >
+                  <Link to={"/"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+                    HOME
+                  </Link>
+                </Typography>
+                <Typography
+                  as="li"
+                  variant="small"
+                  color="blue-gray"
+                  className="p-1 font-normal"
+                >
+                  <Link to={"/about-us"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+                    ABOUT US
+                  </Link>
+                </Typography>
+                <Typography
+                  as="li"
+                  variant="small"
+                  color="blue-gray"
+                  className="p-1 font-normal"
+                >
+                  <MobileDivisionsMenu />
+                </Typography>
+                <Typography
+                  as="li"
+                  variant="small"
+                  color="blue-gray"
+                  className="p-1 font-normal"
+                >
+                  <Link to={"/projects"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+                    PROJECTS
+                  </Link>
+                </Typography>
+                <Typography
+                  as="li"
+                  variant="small"
+                  color="blue-gray"
+                  className="p-1 font-normal"
+                >
+                  <Link to={"/contact-us"} className="flex items-center text-gray-700 hover:text-red-600" onClick={() => setIsOpen(false)}>
+                    CONTACT US
+                  </Link>
+                </Typography>
+              </ul>
+              <Link to={"/contact-us"}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button className="mb-2 bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 mt-4 transition duration-300">
+                    GET A QUOTE
+                  </Button>
+                </motion.div>
+              </Link>
+            </Collapse>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Navbar>
   )
 }
+

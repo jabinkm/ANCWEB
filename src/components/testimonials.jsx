@@ -64,7 +64,7 @@ const testimonials = [
     name: 'Nabeel A. Al Mansour',
     company: 'Saudi Aramco',
     quote: 'ANC provided exceptional insulation services for our refinery project. Their attention to detail and commitment to quality were outstanding.',
-    image: 'images/test1.webp',
+    image: '/images/test1.webp',
   },
   {
     name: 'Fatima Al-Rashid',
