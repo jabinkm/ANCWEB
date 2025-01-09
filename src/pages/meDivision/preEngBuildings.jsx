@@ -1,15 +1,16 @@
 import React from 'react';
-import ServicePageTemplate from '../../components/ServicePageTemplate';
+import ServicePageMED from '../../components/servicePageMED';
 
 const pebImages = [
   "/images/peb1.jpg",
   "/images/peb2.jpg",
-  "/images/peb3.jpg",
+  "/images/peb3.jpeg",
+  "/images/peb4.jpeg",
 ];
 
 export default function PreEngineeredBuildings() {
   return (
-    <ServicePageTemplate
+    <ServicePageMED
       title="PRE ENGINEERED BUILDINGS"
       description="We specialize in pre-engineered buildings, offering cost-effective and efficient solutions for industrial and commercial spaces. Our PEB solutions combine flexibility, durability, and rapid construction to meet diverse client needs."
       features={[

@@ -1,15 +1,15 @@
 import React from 'react';
-import ServicePageTemplate from '../../components/ServicePageTemplate';
+import ServicePageMED from '../../components/servicePageMED';
 
 const steelImages = [
-  "/images/steel1.jpg",
-  "/images/steel2.jpg",
-  "/images/steel3.jpg",
+  "/images/steel1.jpeg",
+  "/images/steel2.jpeg",
+  "/images/steel3.jpeg",
 ];
 
 export default function SteelStructure() {
   return (
-    <ServicePageTemplate
+    <ServicePageMED
       title="STEEL STRUCTURE FABRICATION AND ERECTION"
       description="Our expertise in steel structure fabrication and erection ensures robust and durable constructions for various industrial applications. We combine cutting-edge technology with skilled craftsmanship to deliver high-quality steel structures."
       features={[

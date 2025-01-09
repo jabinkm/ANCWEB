@@ -433,10 +433,10 @@ export default function AboutUs() {
 
   return (
     
-    <main className="flex flex-col min-h-screen overflow-hidden">
+    <main className="flex flex-col min-h-screen">
       <TopHeader />
       <Navigation />
-      
+      <div className="overflow-hidden">
       {/* Hero Section */}
       <motion.div 
         className="relative h-[500px] bg-black"
@@ -591,9 +591,9 @@ export default function AboutUs() {
                     </div>
                   </div>
                   <motion.div 
-                    className="absolute left-[48%] transform translate-x-1/2 w-10 h-10 bg-red-500 rounded-full border-4 border-white"
-                    whileHover={{ scale: 1.2 }}
-                    transition={{ duration: 0.3 }}
+                    className="absolute left-[49.5%] transform translate-x-1/2 w-10 h-10 bg-red-500 rounded-full border-4 border-white animate-bounce"
+                    // whileHover={{ scale: 1.2 }}
+                    // transition={{ duration: 0.3 }}
                   />
                 </motion.div>
               ))}
@@ -725,6 +725,7 @@ export default function AboutUs() {
         </div>
       </motion.section>
       <Footer />
+      </div>
     </main>
   );
 }

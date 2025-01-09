@@ -11,24 +11,24 @@ const DIVISIONS_MENU = [
     title: "MECHANICAL DIVISION (MED)",
     link: "/mechanical-division",
     subMenu: [
-      { name: "PIPING", path: "/mechanical-division/piping" },
-      { name: "EQUIPMENT ERECTION", path: "/mechanical-division/equipment-erection" },
-      { name: "STEEL STRUCTURE FABRICATION & ERECTION", path: "/mechanical-division/steel-structure" },
-      { name: "PRE ENGINEERED BUILDINGS", path: "/mechanical-division/pre-engineered-buildings" },
-      { name: "VALVES & INSTRUMENTS", path: "/mechanical-division/valves-and-instruments" }
+      { name: "Piping", path: "/mechanical-division/piping" },
+      { name: "Equipment Erection", path: "/mechanical-division/equipment-erection" },
+      { name: "Steel Structure Fabrication & Erection", path: "/mechanical-division/steel-structure" },
+      { name: "Pre Engineered Buildings", path: "/mechanical-division/pre-engineered-buildings" },
+      { name: "Valves & Instruments", path: "/mechanical-division/valves-and-instruments" }
     ]
   },
   {
     title: "SPECIALITY SERVICE DIVISION (SSD)",
     link: "/speciality-service-division",
     subMenu: [
-      { name: "THERMAL & ACOUSTIC INSULATION", path: "/speciality-service-division/thermal-acoustic-insulation" },
-      { name: "COATING & PAINTING", path: "/speciality-service-division/coating-painting" },
-      { name: "FIREPROOFING", path: "/speciality-service-division/fireproofing" },
-      { name: "SCAFFOLDING SERVICES", path: "/speciality-service-division/scaffolding" },
-      { name: "REFRACTORY WORKS", path: "/speciality-service-division/refractory" },
-      { name: "WATER PROOFING", path: "/speciality-service-division/waterproofing" },
-      { name: "ELECTRICAL HEAT TRACING", path: "/speciality-service-division/electrical-heat-tracing" },
+      { name: "Thermal & Acoustic Insulation", path: "/speciality-service-division/thermal-and-acoustic-insulation" },
+      { name: "Coating & Painting", path: "/speciality-service-division/coating-and-painting" },
+      { name: "Fireproofing", path: "/speciality-service-division/fireproofing" },
+      { name: "Scaffolding Services", path: "/speciality-service-division/scaffolding-services" },
+      { name: "Refractory Works", path: "/speciality-service-division/refractory-services" },
+      { name: "Water Proofing", path: "/speciality-service-division/waterproofing" },
+      { name: "Electrical Heat Tracing", path: "/speciality-service-division/electrical-heat-tracing" },
     ]
   },
   {

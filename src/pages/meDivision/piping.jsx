@@ -1,5 +1,5 @@
 import React from 'react';
-import ServicePageTemplate from '../../components/ServicePageTemplate';
+import ServicePageMED from '../../components/servicePageMED';
 
 const pipingImages = [
   "/images/pipe1.jpg",
@@ -9,7 +9,7 @@ const pipingImages = [
 
 export default function Piping() {
   return (
-    <ServicePageTemplate
+    <ServicePageMED
       title="PIPING"
       description="Our mechanical division provides effective piping solutions for industrial and commercial facilities, ensuring reliability and efficiency. We specialize in designing, installing, and maintaining complex piping systems that meet the highest industry standards."
       features={[
