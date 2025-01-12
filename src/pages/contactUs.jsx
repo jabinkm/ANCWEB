@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { Button, Input, Textarea, Typography } from "@material-tailwind/react"
-import { TopHeader } from '../components/top-header'
 import { Navigation } from '../components/navigationContactUs'
 import { Footer } from '../components/footer'
 
@@ -93,7 +92,7 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
-        <TopHeader />
+       
         <Navigation />
       {/* Hero Section */}
       <div className="overflow-hidden">

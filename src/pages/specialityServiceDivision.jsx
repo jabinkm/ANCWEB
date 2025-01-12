@@ -1,5 +1,4 @@
 import { Typography, Card, CardBody, Button } from "@material-tailwind/react";
-import { TopHeader } from "../components/top-header";
 import { Footer } from "../components/footer";
 import { Navigation } from "../components/navigationOurServices";
 import { useEffect } from "react";
@@ -128,7 +127,7 @@ export default function SSD() {
 
   return (
     <div className="min-h-screen">
-      <TopHeader />
+      
       <Navigation />
       {/* Hero Section */}
       <motion.div

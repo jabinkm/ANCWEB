@@ -146,9 +146,9 @@ export function Navigation() {
         <motion.img
           src="/images/anc-full-removebg.png"
           alt="ANC Logo"
-          width={200}
-          height={60}
-          className="h-12 w-auto"
+          width={300}
+          height={90}
+          className="h-16 w-auto"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         />

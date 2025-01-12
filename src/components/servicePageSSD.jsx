@@ -3,7 +3,6 @@ import { Typography, Card, CardBody, Button } from "@material-tailwind/react";
 import { motion } from "framer-motion";
 import { Link } from 'react-router-dom';
 import ImageCarousel from './imageCarousel';
-import { TopHeader } from "./top-header";
 import { Footer } from "./footer";
 import { Navigation } from "./navigationOurServices";
 
@@ -13,7 +12,7 @@ export default function ServicePageSSD({ title, description, features, images })
   }, []);
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-100 to-white">
-      <TopHeader />
+     
       <Navigation />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16"> {/* Update 1 */}
         <motion.div

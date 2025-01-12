@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { TopHeader } from '../components/top-header'
 import { Hero } from '../components/hero'
 import { About } from '../components/about'
 import { Services } from '../components/services'
@@ -17,7 +16,6 @@ export default function Home() {
   }, []);
   return (
     <main className="flex flex-col max-h-screen overflow-x-hidden">
-      <TopHeader />
       <Navigation />
       <Hero />
       <About />

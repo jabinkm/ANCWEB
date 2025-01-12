@@ -101,8 +101,8 @@ export function Hero() {
   const slides = [
     {
       bgImage: "/images/hero-bg.jpg",
-      title: "INSULATION & COATING SOLUTIONS",
-      description: "Providing top-quality insulation and coating services for industrial and commercial projects across Saudi Arabia.",
+      title: "MECHANICAL CONTRACTING AND SERVICES",
+      description: "Offering comprehensive mechanical contracting and services for industrial and commercial projects across Saudi Arabia.",
       buttonText: "Explore Our Services",
       buttonLink: "/services"
     },
@@ -114,11 +114,11 @@ export function Hero() {
       buttonLink: "/technologies"
     },
     {
-      bgImage: "/images/hero-bg-3.jpg",
+      bgImage: "/images/team.jpg",
       title: "EXPERT TEAM",
       description: "Our team of skilled professionals ensures the highest quality of work for every project we undertake.",
       buttonText: "Meet Our Team",
-      buttonLink: "/about"
+      buttonLink: "/about-us"
     }
   ];
 

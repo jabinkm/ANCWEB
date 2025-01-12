@@ -14,8 +14,10 @@ import ValvesAndInstruments from "../pages/meDivision/valvesAndInstruments";
 import CoatingPainting from "../pages/ssDivision/coatingPainting";
 import ThermalAcousticInsulation from "../pages/ssDivision/ThermalAcousticInsulation";
 import FireProofing from "../pages/ssDivision/fireProofing";
-import ScaffoldingServices from "../pages/ssDivision/scaaffoldingServices";
+import ScaffoldingServices from "../pages/ssDivision/scaffoldingServices";
 import RefractoryServices from "../pages/ssDivision/refractoryWorks";
+import WaterProofing from "../pages/ssDivision/waterProofing";
+import ElectricalHeatTracing from "../pages/ssDivision/electricalHeatTracing";
 
 
 export default function UserRoute() {
@@ -26,7 +28,6 @@ export default function UserRoute() {
       <Route path="contact-us" element={<ContactPage />} />
       <Route path="projects" element={<Projects />} />
       <Route path="pipe-cold-cutting" element={<PipeColdCutting />} />
-      <Route path="*" element={<Home />} />
       <Route path="mechanical-division" element={<MED />} />
       <Route path="speciality-service-division" element={<SSD />} />
       <Route path="mechanical-division/piping" element={<Piping />} />
@@ -39,6 +40,9 @@ export default function UserRoute() {
       <Route path="speciality-service-division/fireproofing" element={<FireProofing />} />
       <Route path="speciality-service-division/scaffolding-services" element={<ScaffoldingServices />} />
       <Route path="speciality-service-division/refractory-services" element={<RefractoryServices />} />
+      <Route path="speciality-service-division/waterproofing" element={<WaterProofing />} />
+      <Route path="speciality-service-division/electtrical-heat-tracing" element={<ElectricalHeatTracing />} />
+      <Route path="*" element={<Home />} />
     </Routes>
   );
 }

@@ -8,9 +8,9 @@ import {
 
 export default function IsoCertificate() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col ">
       <div className="bg-gray-100 py-16">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <Typography
             variant="h2"
             color="blue-gray"

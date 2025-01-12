@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Typography, Button } from "@material-tailwind/react";
 import { Navigation } from '../components/navigationProjects';
-import { TopHeader } from '../components/top-header';
 import { Footer } from '../components/footer';
 
 const categories = [
@@ -99,7 +98,7 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen">
-        <TopHeader />
+      
         <Navigation />
       {/* Hero Section */}
       <div className="relative h-[500px] bg-black">
