@@ -31,11 +31,11 @@ const timelineEvents = [
     title: "Mechanical Division",
     description: "Added comprehensive mechanical services including Pipes & Pipe Supports, Structures, Equipment, and Pre-engineered Buildings",
   },
-  {
-    year: "2023",
-    title: "Civil Projects",
-    description: "Expanded into Facility Management, Project Site Management, Civil & Road Construction, and Waterproofing",
-  },
+  // {
+  //   year: "2023",
+  //   title: "Civil Projects",
+  //   description: "Expanded into Facility Management, Project Site Management, Civil & Road Construction, and Waterproofing",
+  // },
 ];
 
 const statistics = [
@@ -139,7 +139,7 @@ export default function AboutUs() {
           >
             <Typography className="text-center max-w-4xl mx-auto">
               AHMED YOOSUF AL NUJAIDHI CONTRACTING company was established in the
-              year 2012 with its headquarters in Jubail and 100% Saudi Company
+              year 2012 with its headquarters in Khobar and regional office in Jubail is 100% Saudi Company
               with highly skilled workforce. We offer mechanical industrial
               solutions to the petrochemical, refinery and power generation
               industries including a variety of specialized services such as
@@ -376,7 +376,7 @@ export default function AboutUs() {
 
       {/* Our Presence Section */}
       <motion.section 
-        className="py-16 bg-gray-100"
+        className="py-16 bg-white"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -393,16 +393,16 @@ export default function AboutUs() {
             OUR PRESENCE
           </motion.h2>
           <motion.div 
-            className="relative w-full h-[600px]"
+            className="relative w-full h-[800px]"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
             <img
-              src="/images/ksamapjubail.webp"
+              src="/images/map1.png"
               alt="Our Presence in Saudi Arabia"
-              className="object-contain h-[600px] mx-auto rounded-lg"
+              className="object-contain h-[800px] mx-auto rounded-lg"
             />
           </motion.div>
         </div>

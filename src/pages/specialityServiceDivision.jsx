@@ -69,6 +69,7 @@ const services = [
   },
   {
     title: "WATER PROOFING",
+    sublink: "/speciality-service-division/waterproofing",
     description:
       "Our waterproofing services protect your structures from water damage, ensuring durability and longevity in various environmental conditions.",
     image: "/images/waterproofing.jpg",
@@ -80,6 +81,7 @@ const services = [
   },
   {
     title: "ELECTRICAL HEAT TRACING",
+    sublink: "/speciality-service-division/electrical-heat-tracing",
     description:
       "We provide electrical heat tracing solutions to maintain process temperatures, prevent freezing, and ensure efficient operation of pipelines and equipment.",
     image: "/images/electricalHeatTracing.jpg",
@@ -127,14 +129,13 @@ export default function SSD() {
 
   return (
     <div className="min-h-screen">
-      
       <Navigation />
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative h-[500px] bg-black"
+        className="relative h-[600px] bg-black"
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -168,7 +169,17 @@ export default function SSD() {
           </motion.div>
         </div>
       </motion.div>
-
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-wrap justify-center gap-4">
+          {services.map((service, index) => (
+            <Link key={index} to={service.sublink}>
+              <Button className="bg-blue-gray-900 text-white hover:text-white px-4 py-2 rounded-full hover:bg-red-700 transition duration-300">
+                {service.title}
+              </Button>
+            </Link>
+          ))}
+        </div>
+      </div>
       {/* Services Section */}
       <div className="container mx-auto px-4 py-16">
         <AnimatedSection>
@@ -216,7 +227,7 @@ export default function SSD() {
                     transition={{ delay: 0.5, duration: 0.5 }}
                   >
                     <Link to={service.sublink}>
-                      <Button className="lg:inline-block bg-blue-gray-200 text-red-500 hover:text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300 mt-8 ml-8">
+                      <Button className="lg:inline-block bg-blue-gray-900 text-white hover:text-white px-6 py-2 rounded-full hover:bg-red-700 transition duration-300 mt-8 ml-8">
                         view more
                       </Button>
                     </Link>
@@ -547,4 +558,3 @@ export default function SSD() {
 //     </div>
 //   );
 // }
-

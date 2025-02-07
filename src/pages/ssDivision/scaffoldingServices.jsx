@@ -2,9 +2,9 @@ import React from "react";
 import ServicePageSSD from "../../components/servicePageSSD";
 
 const scaffoldingServicesImages = [
-  "/images/scaff1.jpeg",
-  "/images/scaff2.jpeg",
-  "/images/scaff3.jpeg",
+  "/images/scaff1.jpg",
+  "/images/scaff2.jpg",
+  "/images/scaff3.jpg",
 ];
 
 export default function ScaffoldingServices() {

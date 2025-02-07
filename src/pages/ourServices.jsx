@@ -8,65 +8,54 @@ import { useInView } from "react-intersection-observer";
 
 const services = [
   {
-    title: "PIPING",
+    title: "MECHANICAL DIVISION",
+    sublink: "/mechanical-division",
     description:
-      "Our mechanical division provides effective piping solutions for industrial and commercial facilities, ensuring reliability and efficiency.",
-    image: "images/piping.jpeg",
+      "Our mechanical division specializes in providing high-quality mechanical services, including installation, maintenance, and repair of mechanical systems.",
+     
+    image: "images/mechanical.png",
     features: [
-      "Industrial Equipment",
-      "Process Piping and Equipment",
-      "Energy Efficiency Solutions",
+      "PIPING",
+      "EQUIPMENT ERECTION",
+      "STEEL STRUCTURE FABRICATION AND ERECTION",
+      "PRE ENGINEERED BUILDINGS",
+      "VALVES AND INSTRUMENTS",
     ],
-    sublink: "/mechanical-division/piping"
   },
   {
-    title: "EQUIPMENT ERECTION",
+    title: "SPECIALITY SERVICE DIVISION",
+    sublink: "/speciality-service-division",
     description:
-      "We offer comprehensive equipment erection services, ensuring precise installation and alignment of industrial machinery and structures.",
-    image: "images/mechanical-equipment-erection.jpg",
+      "Our speciality service division offers a comprehensive range of specialized services designed to meet the unique needs of various industries. From thermal and acoustic insulation to fireproofing and refractory works, we provide expert solutions that ensure safety, efficiency, and compliance with industry standards. Our team of skilled professionals is dedicated to delivering high-quality services that enhance the performance and longevity of your projects.",
+    image: "images/insulation1.jpg",
     features: [
-      "Heavy Machinery Installation",
-      "Structural Assembly",
-      "Precision Alignment",
+      "THERMAL & ACOUSTIC INSULATION",
+      "COATIN & PAINTING",
+      "FIREPROOFING",
+      "SCAFFOLDING SERVICES",
+      "REFRACTORY WORKS",
+      "WATER PROOFING",
+      "ELECTRICAL HEAT TRACING",
     ],
-    sublink: "/mechanical-division/equipment-erection"
   },
   {
-    title: "STEEL STRUCTURE FABRICATION AND ERECTION",
+    title: "INDUSTRIAL MATERIALS SUPPLY",
+    sublink: "/industrial-materials-supply",
     description:
-      "Our expertise in steel structure fabrication and erection ensures robust and durable constructions for various industrial applications.",
-    image: "images/Steel-Structure-Fabrication.jpg",
+      "Our industrial materials supply division provides a wide range of high-quality materials essential for various industrial applications. We ensure timely delivery and adherence to industry standards, supporting your projects with reliable and efficient supply solutions.",
+    
+    image: "/images/supply4.jpg",
     features: [
-      "Custom Steel Fabrication",
-      "On-site Assembly",
-      "Quality Assurance",
+      "PIPE AND FITTINGS",
+      "ELECTRICAL MATERIALS",
+      "HAZARDOUS AND NON HAZARDOUS CHEMICALS",
+      "CABLES AND CABLE LADDERS",
+      "INSTRUMENTATION TUBES",
+      "TUBE FITTINGS FOR PETROLEUM CONSTRUCTIONS",
+      "CONDUIT AND CONDUIT FITTINGS",
     ],
-    sublink: "/mechanical-division/steel-structure"
   },
-  {
-    title: "PRE ENGINEERED BUILDINGS",
-    description:
-      "We specialize in pre-engineered buildings, offering cost-effective and efficient solutions for industrial and commercial spaces.",
-    image: "images/pre-engineered-building.jpg",
-    features: [
-      "Design and Engineering",
-      "Quick Installation",
-      "Cost-effective Solutions",
-    ],
-    sublink: "/mechanical-division/pre-engineered-buildings"
-  },
-  {
-    title: "VALVES AND INSTRUMENTS",
-    description:
-      "Our services include the supply and installation of high-quality valves and instruments for precise control and monitoring of industrial processes.",
-    image: "/images/valves1.jpg",
-    features: [
-      "Wide Range of Valves",
-      "Instrumentation Solutions",
-      "Installation and Maintenance",
-    ],
-    sublink: "/mechanical-division/valves-and-instruments"
-  },
+
 ];
 
 function AnimatedSection({ children }) {
@@ -89,7 +78,7 @@ function AnimatedSection({ children }) {
       initial="hidden"
       variants={{
         visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 50 }
+        hidden: { opacity: 0, y: 50 },
       }}
       transition={{ duration: 0.5 }}
     >
@@ -98,14 +87,13 @@ function AnimatedSection({ children }) {
   );
 }
 
-export default function MED() {
+export default function OurServices() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen">
-    
       <Navigation />
       {/* Hero Section */}
       <motion.div
@@ -117,7 +105,7 @@ export default function MED() {
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/images/mechanical.png')",
+            backgroundImage: "url('/images/serviceHero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-black/70" />
@@ -132,7 +120,7 @@ export default function MED() {
               variant="h1"
               className="text-white text-4xl md:text-6xl font-bold max-w-4xl"
             >
-              MECHANICAL SERVICES FOR INDUSTRIAL AND COMMERCIAL PROJECTS
+              SERVICES PROVIDED BY ANC ARABIA
             </Typography>
           </motion.div>
           <motion.div
@@ -146,19 +134,17 @@ export default function MED() {
           </motion.div>
         </div>
       </motion.div>
-      
-        <div className="container mx-auto px-4 py-8">
-          <div className="flex flex-wrap justify-center gap-4">
-            {services.map((service, index) => (
-              <Link key={index} to={service.sublink}>
-                <Button className="bg-blue-gray-900 text-white hover:text-white px-4 py-2 rounded-full hover:bg-red-700 transition duration-300">
-                  {service.title}
-                </Button>
-              </Link>
-            ))}
-          </div>
+      <div className="container mx-auto px-4 py-8">
+        <div className="flex flex-wrap justify-center gap-4">
+          {services.map((service, index) => (
+            <Link key={index} to={service.sublink}>
+              <Button className="bg-blue-gray-900 text-white hover:text-white px-4 py-2 rounded-full hover:bg-red-700 transition duration-300">
+                {service.title}
+              </Button>
+            </Link>
+          ))}
         </div>
-      
+      </div>
       {/* Services Section */}
       <div className="container mx-auto px-4 py-16">
         <AnimatedSection>
@@ -166,7 +152,7 @@ export default function MED() {
             variant="h2"
             className="text-3xl font-bold mb-12 text-center"
           >
-            OUR MECHANICAL DIVISION
+            OUR SERVICE DIVISION
           </Typography>
         </AnimatedSection>
 
@@ -191,7 +177,10 @@ export default function MED() {
                         key={featureIndex}
                         initial={{ x: 20, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.1 * featureIndex, duration: 0.5 }}
+                        transition={{
+                          delay: 0.1 * featureIndex,
+                          duration: 0.5,
+                        }}
                       >
                         {feature}
                       </motion.li>
@@ -237,7 +226,13 @@ export default function MED() {
               to your projects:
             </Typography>
             <ul className="list-disc list-inside space-y-2 text-gray-600">
-              {["Initial Site Assessment", "Budget and planning services", "Project Management", "Ongoing Maintenance Plans", "Energy Optimization"].map((item, index) => (
+              {[
+                "Initial Site Assessment",
+                "Budget and planning services",
+                "Project Management",
+                "Ongoing Maintenance Plans",
+                "Energy Optimization",
+              ].map((item, index) => (
                 <motion.li
                   key={index}
                   initial={{ x: 20, opacity: 0 }}
@@ -255,4 +250,3 @@ export default function MED() {
     </div>
   );
 }
-

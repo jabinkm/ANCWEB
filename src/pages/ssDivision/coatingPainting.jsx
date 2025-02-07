@@ -2,9 +2,9 @@ import React from "react";
 import ServicePageSSD from "../../components/servicePageSSD";
 
 const coatingPaintingImages = [
-  "/images/coating1.jpeg",
-  "/images/coating2.jpeg",
-  "/images/coating3.jpeg",
+  "/images/painting3.jpeg",
+  "/images/painting2.webp",
+  "/images/painting5.jpg",
 ];
 
 export default function CoatingPainting() {

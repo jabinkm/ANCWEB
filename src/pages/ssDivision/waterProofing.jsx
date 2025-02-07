@@ -2,9 +2,9 @@ import React from "react";
 import ServicePageSSD from "../../components/servicePageSSD";
 
 const waterProofingImages = [
-  "/images/Wp1.jpeg",
-  "/images/Wp2.jpeg",
-  "/images/Wp3.jpeg",
+  "/images/wp1.jpeg",
+  "/images/wp2.jpeg",
+  "/images/wp3.jpeg",
 ];
 
 export default function WaterProofing() {

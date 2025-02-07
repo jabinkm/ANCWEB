@@ -8,7 +8,7 @@ import {
 
 export default function IsoCertificate() {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col">
       <div className="bg-gray-100 py-16">
         <div className="mx-auto px-4">
           <Typography
@@ -18,7 +18,7 @@ export default function IsoCertificate() {
           >
             Our ISO Certifications
           </Typography>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"> 
             {[
               {
                 name: "ISO 9001:2015",
@@ -36,7 +36,7 @@ export default function IsoCertificate() {
                 image: "/images/iso45001.png",
               },
             ].map((cert, index) => (
-              <Card key={index} className="mt-6 w-96">
+              <Card key={index} className="mt-6 sm:w-96 mx-auto">
                 <CardHeader color="blue-gray" className="">
                   <img
                     src={cert.image}

@@ -27,7 +27,7 @@ export function Footer() {
             <ul className="space-y-2">
               <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"/"} >Home</Link></li>
               <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"/about-us"}>About Us</Link></li>
-              <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"#services"}>Services</Link></li>
+              <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"/services"}>Services</Link></li>
               <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"/projects"}>Projects</Link></li>
               <li className="text-gray-400 hover:text-white transition duration-300"><Link to={"/contact-us"}>Contact</Link></li>
             </ul>

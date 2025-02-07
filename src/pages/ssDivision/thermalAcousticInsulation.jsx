@@ -2,9 +2,9 @@ import React from "react";
 import ServicePageSSD from "../../components/servicePageSSD";
 
 const thermalAcousticInsulationImages = [
-  "/images/insulation1.jpeg",
-  "/images/insulation2.jpeg",
-  "/images/insulation3.jpeg",
+  "/images/insulation1.jpg",
+  "/images/insulation3.jpg",
+  "/images/insulation2.jpg",
 ];
 
 export default function ThermalAcousticInsulation() {

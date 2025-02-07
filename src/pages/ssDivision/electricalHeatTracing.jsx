@@ -2,7 +2,7 @@ import React from "react";
 import ServicePageSSD from "../../components/servicePageSSD";
 
 const EHTImages = [
-  "/images/EHT1.jpeg",
+  "/images/EHT1.jpg",
   "/images/EHT2.jpeg",
   "/images/EHT3.jpeg",
 ];
@@ -10,7 +10,7 @@ const EHTImages = [
 export default function ElectricalHeatTracing() {
   return (
     <ServicePageSSD
-      title="FIREPROOFING"
+      title="ELECTRICAL HEAT TRACING"
       description="Our electrical heat tracing solutions are designed to maintain process temperatures, prevent freezing, and ensure efficient operation of pipelines and equipment. We provide comprehensive services from design to installation and maintenance, optimizing your processes and reducing energy costs."
       features={[
         "Custom-designed heat tracing systems for various industrial applications",

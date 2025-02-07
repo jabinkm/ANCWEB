@@ -133,8 +133,12 @@ export default function ContactPage() {
                   <div>
                     <Typography variant="h6" className="mb-1">Address</Typography>
                     <Typography className="text-gray-700">
+                      HEAD OFFICE<br />
                       King Saud Street Intersection 1 - 2,<br />
-                      Al Khobar - 31952, Saudi Arabia
+                      Al Khobar - 31952, Saudi Arabia<br /><br />
+                      REGIONAL OFFICE<br />
+                      XJ3R+RR7 Berri Gas Road,<br />
+                      Al Jubail - 31961, Saudi Arabia
                     </Typography>
                   </div>
                 </div>
@@ -287,7 +291,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-gray-100">
+      {/* <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
           <Typography variant="h3" className="text-center mb-8">Our Location</Typography>
           <div className="md:h-[500px] h-[300px] w-full rounded-lg overflow-hidden shadow-lg">
@@ -303,7 +307,45 @@ export default function ContactPage() {
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> */}
+      <section className="py-16 bg-gray-100">
+      <div className="container mx-auto px-4">
+        <Typography variant="h3" className="text-center mb-8">Our Locations</Typography>
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Head Office Map */}
+          <div className="flex flex-col">
+            <Typography variant="h5" className="text-center mb-4">Head Office</Typography>
+            <div className="h-[300px] md:h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7149.827966662883!2d50.19128913166594!3d26.36164398453393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDIxJzQyLjEiTiA1MMKwMTEnNDEuNCJF!5e0!3m2!1sen!2ssa!4v1735634917663!5m2!1sen!2ssa"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Regional Office Map */}
+          <div className="flex flex-col">
+            <Typography variant="h5" className="text-center mb-4">Regional Office</Typography>
+            <div className="h-[300px] md:h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1248.6883110492108!2d49.64142610512749!3d26.954550636543367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e35a1768a917ac3%3A0xd0fb34664aafc7b8!2sANC%20Arabia%20Contracting%20Company%E2%9C%93!5e0!3m2!1sen!2ssa!4v1736768157177!5m2!1sen!2ssa"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
       <Footer />
       </div>
     </main>

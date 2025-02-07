@@ -2,23 +2,23 @@ import React from "react";
 import ServicePageSSD from "../../components/servicePageSSD";
 
 const refractoryImages = [
-  "/images/refractory1.jpeg",
-  "/images/refractory2.jpeg",
-  "/images/refractory3.jpeg",
+  "/images/RFT1.jpg",
+  "/images/RFT2.jpg",
+  "/images/RFT3.jpg",
 ];
 
 export default function RefractoryServices() {
   return (
     <ServicePageSSD
       title="REFRACTORY SERVICES"
-      description="Our electrical heat tracing solutions are designed to maintain process temperatures, prevent freezing, and ensure efficient operation of pipelines and equipment. We provide comprehensive services from design to installation and maintenance, optimizing your processes and reducing energy costs."
+      description="Our refractory services include the installation, repair, and maintenance of refractory materials to ensure the longevity and efficiency of your industrial equipment. We offer tailored solutions to meet the specific needs of your operations, enhancing performance and reducing downtime."
       features={[
-        "Custom-designed heat tracing systems for various industrial applications",
-        "Installation of self-regulating and constant wattage heating cables",
-        "Advanced control and monitoring systems for optimal performance",
+        "Custom-designed refractory solutions for various industrial applications",
+        "Installation of high-quality refractory materials",
+        "Repair and maintenance services to extend the life of your equipment",
+        "Advanced techniques for optimal performance",
         "Energy-efficient solutions to reduce operational costs",
-        "Freeze protection for pipes, tanks, and vessels",
-        "Maintenance and troubleshooting services for existing heat tracing systems",
+        "Inspection and troubleshooting services for existing refractory systems",
       ]}
       images={refractoryImages}
     />

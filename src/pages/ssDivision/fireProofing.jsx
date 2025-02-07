@@ -2,9 +2,9 @@ import React from "react";
 import ServicePageSSD from "../../components/servicePageSSD";
 
 const fireProofingImages = [
-  "/images/fp1.jpeg",
-  "/images/fp2.jpeg",
-  "/images/fp3.jpeg",
+  "/images/fp1.jpg",
+  "/images/fp2.jpg",
+  "/images/fp3.jpg",
 ];
 
 export default function FireProofing() {
