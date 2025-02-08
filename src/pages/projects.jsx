@@ -16,7 +16,7 @@ const projects = [
     id: 1,
     title: "Material Engineering",
     description: "Developing more efficient material eng",
-    image: "/images/MaterialEngineer.jpg",
+    image: "/images/projects/0003.jpg",
     categories: ["Material", "Engineering"],
     type: "insulation"
   },
@@ -24,7 +24,7 @@ const projects = [
     id: 2,
     title: "IUT Bank Building",
     description: "Developing more efficient material eng",
-    image: "/images/bank.jpg",
+    image: "/images/projects/0005.jpg",
     categories: ["Material", "Engineering"],
     type: "pipe"
   },
@@ -32,7 +32,7 @@ const projects = [
     id: 3,
     title: "Wind Energy Plant",
     description: "Developing more efficient material eng",
-    image: "/images/wind-energy.jpg",
+    image: "/images/projects/0007.jpg",
     categories: ["Material", "Engineering"],
     type: "trading"
   },
@@ -40,7 +40,7 @@ const projects = [
     id: 4,
     title: "Office Building",
     description: "Developing more efficient material eng",
-    image: "/images/office.jpg",
+    image: "/images/projects/0015.jpg",
     categories: ["Material", "Engineering"],
     type: "support"
   },
@@ -48,7 +48,7 @@ const projects = [
     id: 5,
     title: "US Logistic Port",
     description: "Developing more efficient material eng",
-    image: "/projects/port.jpg",
+    image: "/images/projects/0017.jpg",
     categories: ["Material", "Engineering"],
     type: "insulation"
   },
@@ -56,7 +56,7 @@ const projects = [
     id: 6,
     title: "Moscow life",
     description: "Developing more efficient material eng",
-    image: "/projects/moscow.jpg",
+    image: "/images/projects/0018.jpg",
     categories: ["Material", "Engineering"],
     type: "pipe"
   },
@@ -64,7 +64,7 @@ const projects = [
     id: 7,
     title: "Car Engineering",
     description: "Developing more efficient material eng",
-    image: "/projects/car.jpg",
+    image: "/images/projects/0025.jpg",
     categories: ["Material", "Engineering"],
     type: "trading"
   },
@@ -72,7 +72,7 @@ const projects = [
     id: 8,
     title: "Factory development",
     description: "Developing more efficient material eng",
-    image: "/projects/factory.jpg",
+    image: "/images/projects/0035.jpg",
     categories: ["Material", "Engineering"],
     type: "support"
   },
@@ -80,10 +80,34 @@ const projects = [
     id: 9,
     title: "Wind Energy Plant",
     description: "Developing more efficient material eng",
-    image: "/projects/wind-plant.jpg",
+    image: "/images/projects/0043.jpg",
     categories: ["Material", "Engineering"],
     type: "insulation"
   },
+  {
+    id: 10,
+    title: "Car Engineering",
+    description: "Developing more efficient material eng",
+    image: "/images/projects/0048.jpg",
+    categories: ["Material", "Engineering"],
+    type: "trading"
+  },
+  {
+    id: 11,
+    title: "Factory development",
+    description: "Developing more efficient material eng",
+    image: "/images/projects/0051.jpg",
+    categories: ["Material", "Engineering"],
+    type: "support"
+  },
+  {
+    id: 12,
+    title: "Wind Energy Plant",
+    description: "Developing more efficient material eng",
+    image: "/images/projects/0053.jpg",
+    categories: ["Material", "Engineering"],
+    type: "insulation"
+  },  
 ];
 
 export default function Projects() {
@@ -153,7 +177,7 @@ export default function Projects() {
                   </Button>
                 </div> */}
               </div>
-              <div className="mt-4">
+              {/* <div className="mt-4">
                 <Typography variant="h5" className="mb-2">
                   {project.title}
                 </Typography>
@@ -173,7 +197,7 @@ export default function Projects() {
                     </Typography>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
