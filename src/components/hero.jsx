@@ -194,14 +194,18 @@ export function Hero() {
         transition={{ duration: 0.8, delay: 0.8 }}
       >
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <a href="https://www.facebook.com/ancarabia">
           <IconButton color="white" variant="outlined" size="sm" className="hover:text-blue-700 hover:border-red-500 hover:bg-white">
             <i className="fab fa-facebook-f" />
           </IconButton>
+          </a>
         </motion.div>
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+        <a href="https://www.linkedin.com/company/anc-arabia/posts/">
           <IconButton color="white" variant="outlined" size="sm" className="hover:text-white hover:border-red-500 hover:bg-blue-600">
             <i className="fab fa-linkedin-in" />
           </IconButton>
+        </a>
         </motion.div>
         <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <IconButton color="white" variant="outlined" size="sm" className="hover:text-white hover:border-red-500 hover:bg-black">

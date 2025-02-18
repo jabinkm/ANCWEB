@@ -107,7 +107,47 @@ const projects = [
     image: "/images/projects/0053.jpg",
     categories: ["Material", "Engineering"],
     type: "insulation"
-  },  
+  },
+  {
+    id: 13,
+    title: "Car Engineering",
+    description: "Developing more efficient material eng",
+    image: "/images/projects/009.jpg",
+    categories: ["Material", "Engineering"],
+    type: "trading"
+  },
+  {
+    id: 14,
+    title: "Factory development",
+    description: "Developing more efficient material eng",
+    image: "/images/projects/014.jpg",
+    categories: ["Material", "Engineering"],
+    type: "support"
+  },
+  {
+    id: 15,
+    title: "Wind Energy Plant",
+    description: "Developing more efficient material eng",
+    image: "/images/projects/017.jpg",
+    categories: ["Material", "Engineering"],
+    type: "insulation"
+  },
+  {
+    id: 16,
+    title: "Factory development",
+    description: "Developing more efficient material eng",
+    image: "/images/projects/026.jpg",
+    categories: ["Material", "Engineering"],
+    type: "support"
+  },
+  {
+    id: 17,
+    title: "Wind Energy Plant",
+    description: "Developing more efficient material eng",
+    image: "/images/projects/035.jpg",
+    categories: ["Material", "Engineering"],
+    type: "insulation"
+  },   
 ];
 
 export default function Projects() {
@@ -162,7 +202,7 @@ export default function Projects() {
 
       {/* Projects Grid */}
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
           {filteredProjects.map((project) => (
             <div key={project.id} className="group cursor-pointer">
               <div className="relative overflow-hidden rounded-lg shadow-lg">

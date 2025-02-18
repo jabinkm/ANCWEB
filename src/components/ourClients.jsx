@@ -28,9 +28,10 @@ export default function OurClients() {
   return (
     <div className="w-full bg-gray-100 py-12">
       <div className="container mx-auto px-4">
-        <Typography variant="h3" className="text-center mb-8">
+        {/* <Typography variant="h3" className="text-center mb-8">
           Our Clients
-        </Typography>
+        </Typography> */}
+         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-800">Our Clients</h2>
         <div className="relative">
           <div className="flex animate-scroll-fast hover:animate-scroll gap-16">
             {[...clients, ...clients].map((client, index) => (
