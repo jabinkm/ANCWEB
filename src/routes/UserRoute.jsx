@@ -12,7 +12,7 @@ import SteelStructure from "../pages/meDivision/steelStructure";
 import PreEngineeredBuildings from "../pages/meDivision/preEngBuildings";
 import ValvesAndInstruments from "../pages/meDivision/valvesAndInstruments";
 import CoatingPainting from "../pages/ssDivision/coatingPainting";
-import ThermalAcousticInsulation from "../pages/ssDivision/ThermalAcousticInsulation";
+import ThermalAcousticInsulation from "../pages/ssDivision/thermalAcousticInsulation";
 import FireProofing from "../pages/ssDivision/fireProofing";
 import ScaffoldingServices from "../pages/ssDivision/scaffoldingServices";
 import RefractoryServices from "../pages/ssDivision/refractoryWorks";
