@@ -1,5 +1,6 @@
 
-import { Card, CardHeader, CardBody, Typography } from "@material-tailwind/react";
+import { Card, CardHeader, CardBody, Typography, Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const projects = [
   {
@@ -51,6 +52,11 @@ export function Projects() {
               </CardBody>
             </Card>
           ))}
+          <Link to={"/projects"}>
+          <Button className="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition duration-300 mx-auto">
+           View More Projects
+          </Button>
+          </Link>
         </div>
       </div>
     </section>

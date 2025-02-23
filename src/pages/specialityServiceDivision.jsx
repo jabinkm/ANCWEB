@@ -14,6 +14,7 @@ const services = [
       "We provide top-notch thermal and acoustic insulation services to enhance energy efficiency and reduce noise pollution in industrial and commercial settings.",
     image: "images/specialityService.webp",
     features: [
+      "Hot, Cold and Acoustic Insulations",
       "High-Performance Insulation Materials",
       "Noise Reduction Solutions",
       "Energy Saving Techniques",
@@ -23,9 +24,17 @@ const services = [
     title: "COATING & PAINTING",
     sublink: "/speciality-service-division/coating-and-painting",
     description:
-      "Our coating and painting services protect your structures and equipment from corrosion, wear, and environmental damage, ensuring longevity and durability.",
+      "Our coating and painting services protect your structures and equipment from corrosion, wear, and environmental damage, ensuring longevity and durability.Our highly skilled professional and experienced team can provide full scope of services related to Sand blasting and Painting:",
     image: "images/painting.jpg",
     features: [
+      "Epoxy Coating Systems",
+      "Polyurethane Coating Systems",
+      "Alkyd Enamel Coating System",
+      "Aluminum-Pigmented Alkyd Coating System",
+      "Chlorinated Rubber Coating System",
+      "Bituminous Paint",
+      "High Temperature Coating Systems",
+      "Tape Wrapping",
       "Anti-Corrosion Coatings",
       "Industrial Painting",
       "Surface Preparation",
@@ -50,6 +59,9 @@ const services = [
       "Our scaffolding services provide safe and reliable access solutions for construction, maintenance, and repair projects, ensuring worker safety and project efficiency.",
     image: "/images/scaffolding.jpg",
     features: [
+      "Suspended scaffold",
+      "Cantilever scaffold",
+      "Tower scaffold",
       "Custom Scaffolding Design",
       "Erection and Dismantling",
       "Safety Inspections",
@@ -74,8 +86,9 @@ const services = [
       "Our waterproofing services protect your structures from water damage, ensuring durability and longevity in various environmental conditions.",
     image: "/images/waterproofing.jpg",
     features: [
-      "Membrane Waterproofing",
-      "Cementitious Waterproofing",
+      "Polyurethane coatings",
+      "Polyurea coatings",
+      "Bitumen Based Coatings",
       "Leak Detection and Repair",
     ],
   },

@@ -271,6 +271,11 @@ const services = [
       "Our mechanical division provides effective piping solutions for industrial and commercial facilities, ensuring reliability and efficiency.",
     image: "images/piping.jpeg",
     features: [
+      "Pipe fabrication",
+      "Pipe Installation",
+      "Pressure testing (Hydro & pneumatic)",
+      " Pre-commissioning and commissioning",
+
       "Industrial Equipment",
       "Process Piping and Equipment",
       "Energy Efficiency Solutions",
@@ -283,6 +288,9 @@ const services = [
       "We offer comprehensive equipment erection services, ensuring precise installation and alignment of industrial machinery and structures.",
     image: "images/mechanical-equipment-erection.jpg",
     features: [
+      "Static equipment",
+      "Rotary equipment",
+      "Heater and reformer",
       "Heavy Machinery Installation",
       "Structural Assembly",
       "Precision Alignment",
@@ -295,7 +303,9 @@ const services = [
       "Our expertise in steel structure fabrication and erection ensures robust and durable constructions for various industrial applications.",
     image: "images/Steel-Structure-Fabrication.jpg",
     features: [
+      "Steel Structure Procurement",
       "Custom Steel Fabrication",
+      "Steel Structure Installation",
       "On-site Assembly",
       "Quality Assurance",
     ],
@@ -307,8 +317,10 @@ const services = [
       "We specialize in pre-engineered buildings, offering cost-effective and efficient solutions for industrial and commercial spaces.",
     image: "images/pre-engineered-building.jpg",
     features: [
-      "Design and Engineering",
-      "Quick Installation",
+      "Design, Detailing & Engineering",
+      "PEB Fabrication",
+      "Quick Installation and Sheeting",
+      "Pre-commissioning and commissioning",
       "Cost-effective Solutions",
     ],
     sublink: "/mechanical-division/pre-engineered-buildings"

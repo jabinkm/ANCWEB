@@ -101,7 +101,7 @@ export function Hero() {
   const slides = [
     {
       bgImage: "/images/hero-bg.jpg",
-      title: "MECHANICAL CONTRACTING AND SERVICES",
+      title: "MECHANICAL CONTRACTING AND SPECIALITY SERVICES",
       description: "Offering comprehensive mechanical contracting and services for industrial and commercial projects across Saudi Arabia.",
       buttonText: "Explore Our Services",
       buttonLink: "/services"
@@ -125,11 +125,11 @@ export function Hero() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 4000,
     beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex),
   };
 
@@ -153,9 +153,9 @@ export function Hero() {
             </motion.div>
 
             {/* Content */}
-            <div className="relative container mx-auto h-full flex flex-col justify-center items-center text-white px-4 py-36">
+            <div className="relative container mx-auto h-full flex flex-col justify-center items-center text-white px-4 py-36 mt-24">
               <motion.h1 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 leading-tight"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 leading-tight"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: currentSlide === index ? 1 : 0, y: currentSlide === index ? 0 : 50 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -163,7 +163,7 @@ export function Hero() {
                 {slide.title}
               </motion.h1>
               <motion.p 
-                className="text-xl md:text-2xl text-center mb-12 max-w-3xl"
+                className="text-l md:text-xl text-center mb-12 max-w-3xl"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: currentSlide === index ? 1 : 0, y: currentSlide === index ? 0 : 50 }}
                 transition={{ duration: 0.8, delay: 0.4 }}

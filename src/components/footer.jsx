@@ -10,7 +10,6 @@ export function Footer() {
           <div>
             <img
               src="/images/ANCwhite.png"
-              
               alt="ANC Logo"
               width={150}
               height={50}
@@ -53,15 +52,19 @@ export function Footer() {
               Follow Us
             </Typography>
             <div className="flex space-x-4">
+            <a href="https://www.facebook.com/ancarabia">
               <IconButton color="white" className="rounded-full">
                 <i className="fab fa-facebook-f" />
               </IconButton>
+              </a>
               <IconButton color="white" className="rounded-full">
                 <i className="fab fa-twitter" />
               </IconButton>
+              <a href="https://www.linkedin.com/company/anc-arabia/posts/">
               <IconButton color="white" className="rounded-full">
                 <i className="fab fa-linkedin-in" />
               </IconButton>
+              </a>
               <IconButton color="white" className="rounded-full">
                 <i className="fab fa-instagram" />
               </IconButton>

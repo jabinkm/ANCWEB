@@ -521,8 +521,8 @@ export default function AboutUs() {
           className="object-cover opacity-70 h-[500px] w-full"
         />
         <motion.div 
-          className="absolute inset-0 flex flex-col items-center justify-evenly text-white/60"
-          initial={{ opacity: 0, y: 20 }}
+          className="absolute inset-0 flex flex-col items-center justify-evenly text-white/80"
+          initial={{ opacity: 10, y: 200 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
@@ -820,6 +820,67 @@ export default function AboutUs() {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Our Vendor Registrations Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            className="text-3xl font-bold text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            OUR VENDOR REGISTRATIONS
+          </motion.h2>
+          <motion.div
+            className="overflow-x-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <table className="w-full min-w-[600px] border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
+              <thead>
+                <tr className="bg-black text-white">
+                  <th className="py-4 px-6 text-left font-bold">SL.NO</th>
+                  <th className="py-4 px-6 text-left font-bold">VENDOR NAME</th>
+                  <th className="py-4 px-6 text-left font-bold">VENDOR CODE</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { no: 1, name: "SAUDI ARAMCO", code: "10059334" },
+                  { no: 2, name: "SABIC", code: "11051270" },
+                  { no: 3, name: "SADARA", code: "1000005003" },
+                  { no: 4, name: "MA'ADEN", code: "20231294" },
+                  { no: 5, name: "SATORP", code: "14188" },
+                  { no: 6, name: "SIPCHEM", code: "104637" },
+                  { no: 7, name: "CHEMANOL", code: "3763" },
+                  { no: 8, name: "SAMREF", code: "11192" },
+                  { no: 9, name: "TASNEE PETROCHEMICAL COMPANY", code: "106409" },
+                  { no: 10, name: "FARABI PETROCHEMICAL COMPANY", code: "8001642" },
+                  { no: 11, name: "SAUDI ARAMCO OIL BASE COMPANY - LUBEREF", code: "63149" },
+                  { no: 12, name: "SAUDI ELECTRICITY COMPANY (SEC)", code: "5016018" },
+                ].map((vendor, index) => (
+                  <motion.tr
+                    key={index}
+                    className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <td className="py-4 px-6 border-b border-gray-200">{vendor.no}</td>
+                    <td className="py-4 px-6 border-b border-gray-200 font-medium">{vendor.name}</td>
+                    <td className="py-4 px-6 border-b border-gray-200">{vendor.code}</td>
+                  </motion.tr>
+                ))}
+              </tbody>
+            </table>
+          </motion.div>
         </div>
       </section>
 
