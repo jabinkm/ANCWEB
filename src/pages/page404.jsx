@@ -21,7 +21,7 @@ const Page404 = () => {
           animate={{ rotate: [0, 10, -10, 10, 0] }}
           transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
         >
-          <Typography variant="h1" color="blue-gray" className="mb-2 text-7xl font-bold">
+          <Typography variant="h1" color="blue-gray" className="m-4 text-7xl font-bold overflow-hidden">
             404
           </Typography>
         </motion.div>
@@ -29,7 +29,7 @@ const Page404 = () => {
           Oops! Page Not Found
         </Typography>
         <motion.div
-          animate={{ scale: [1, 1.1, 1] }}
+          animate={{ scale: [1, 1, 1] }}
           transition={{ repeat: Number.POSITIVE_INFINITY, duration: 2 }}
           className="mb-8"
         >
@@ -37,7 +37,7 @@ const Page404 = () => {
             src="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif"
             alt="Confused Travolta"
             className="mx-auto rounded-lg shadow-lg"
-            style={{ width: "300px", height: "auto" }}
+            style={{ width: "450px", height: "auto" }}
           />
         </motion.div>
         <Typography color="gray" className="mb-8">

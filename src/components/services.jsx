@@ -1,4 +1,5 @@
-import { Card, CardBody, Typography, IconButton } from "@material-tailwind/react";
+import { Card, CardBody, Typography, IconButton, Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -44,6 +45,11 @@ export function Services() {
               </CardBody>
             </Card>
           ))}
+          <Link to={"/services"}>
+          <Button className="bg-red-600 text-white px-6 py-3 rounded-full hover:bg-red-700 transition duration-300 mx-auto">
+           View Our Services
+          </Button>
+          </Link>
         </div>
       </div>
     </section>

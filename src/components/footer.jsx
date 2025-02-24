@@ -15,7 +15,7 @@ export function Footer() {
               height={50}
               className="mb-4"
             />
-            <Typography color="gray" className="font-normal">
+            <Typography className="font-normal text-blue-gray-400">
               Ahmed Yoosuf Al Nujaidhi Contracting Company (ANC) is a leading provider of insulation and coating solutions in Saudi Arabia.
             </Typography>
           </div>
@@ -35,8 +35,8 @@ export function Footer() {
             <Typography variant="h6" color="white" className="mb-4">
               Contact Info
             </Typography>
-            <Typography color="gray" className="font-normal mb-2">
-              King Saud Street Intersection 1 - 2, Al Khobar - 31952, Saudi Arabia
+            <Typography className="font-normal mb-2 text-blue-gray-400">
+              King Saud Street Intersection 1 - 2, <br/>Al-Khobar - 31952, Saudi Arabia.
             </Typography>
             <Typography color="gray" className="font-normal mb-2">
             <p className="text-gray-600 hover:text-red-500"><a href="tel:+966 13 893 3315">+966 13 893 3315</a></p>

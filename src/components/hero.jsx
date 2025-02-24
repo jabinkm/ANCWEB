@@ -176,7 +176,7 @@ export function Hero() {
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <Link to={slide.buttonLink}>
-                  <Button className="bg-red-600 text-white px-8 py-3 text-lg rounded-full hover:bg-red-700 transition duration-300">
+                  <Button className="bg-red-700 text-white px-8 py-3 text-lg rounded-full hover:bg-red-900 transition duration-300">
                     {slide.buttonText}
                   </Button>
                 </Link>
