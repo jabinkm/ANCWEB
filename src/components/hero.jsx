@@ -110,8 +110,8 @@ export function Hero() {
       bgImage: "/images/hero-bg-2.jpeg",
       title: "INNOVATIVE TECHNOLOGIES",
       description: "Utilizing cutting-edge technologies to deliver superior insulation and coating solutions for your projects.",
-      buttonText: "Our Technologies",
-      buttonLink: "/technologies"
+      buttonText: "Contact Us",
+      buttonLink: "/contact-us"
     },
     {
       bgImage: "/images/team.jpg",
