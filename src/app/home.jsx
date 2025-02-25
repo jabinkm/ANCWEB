@@ -23,7 +23,7 @@ export default function Home() {
       <Projects />
       <OurClients />
       <IsoCertificate />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </main>
