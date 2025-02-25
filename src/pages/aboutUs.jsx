@@ -474,7 +474,7 @@ const directors = [
     description: "Is leading up the directions of ANC Corporation, ensuring the implementation of policies and procedures, and responsibilities, with strong vision.",
   },
   {
-    image: "/images/shamnadkka.jpg",
+    image: "/images/ShamnadHamza.png",
     name: "Shamnad Hamza",
     title: "General Manager",
     description: "With extensive experience in Oil industry is ultimately responsible for the overall direction, the corporate strategies and Policies of ANC operations.",
