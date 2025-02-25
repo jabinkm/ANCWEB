@@ -35,7 +35,7 @@ const Page404 = () => {
         >
           <img
             src="https://media.giphy.com/media/14uQ3cOFteDaU/giphy.gif"
-            alt="Confused Travolta"
+            alt="Muneer"
             className="mx-auto rounded-lg shadow-lg"
             style={{ width: "450px", height: "auto" }}
           />
