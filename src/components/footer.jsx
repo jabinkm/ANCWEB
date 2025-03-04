@@ -44,7 +44,7 @@ export function Footer() {
             </Typography>
             <Typography color="gray" className="font-normal">
             <p className="text-gray-600 hover:text-red-500"><a href="mailto:info@ancarabia.com">info@ancarabia.com</a></p>
-            <p className="text-gray-600 hover:text-red-500"><a href="mailto:sales@ancarabia.com">sales@ancarabia.com</a></p>
+            <p className="text-gray-600 hover:text-red-500"><a href="mailto:estimation@ancarabia.com">estimation@ancarabia.com</a></p>
             </Typography>
           </div>
           <div>

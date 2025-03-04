@@ -470,7 +470,7 @@ const directors = [
   {
     image: "/images/AhmedYoosuf.jpg",
     name: "Ahmed Yoosuf Al Nujaidhi",
-    title: "CEO",
+    title: "PRESIDENT",
     description: "Is leading up the directions of ANC Corporation, ensuring the implementation of policies and procedures, and responsibilities, with strong vision.",
   },
   {
