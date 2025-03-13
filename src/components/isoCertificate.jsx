@@ -31,7 +31,7 @@ export default function IsoCertificate() {
               },
             ].map((cert, index) => (
               <Card key={index} className="mt-6 sm:w-96 mx-auto">
-                <CardHeader color="" className="">
+                <CardHeader color="white" className="">
                   <img
                     src={cert.image}
                     alt={cert.name}
