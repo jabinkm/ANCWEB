@@ -31,11 +31,11 @@ export default function IsoCertificate() {
               },
             ].map((cert, index) => (
               <Card key={index} className="mt-6 sm:w-96 mx-auto">
-                <CardHeader color="blue-gray" className="">
+                <CardHeader color="" className="">
                   <img
                     src={cert.image}
                     alt={cert.name}
-                    className="h-full w-full object-contain"
+                    className="h-[80%] w-[80%] object-contain mx-auto my-auto"
                   />
                 </CardHeader>
                 <CardBody>
@@ -44,6 +44,9 @@ export default function IsoCertificate() {
                   </Typography>
                   <Typography>{cert.description}</Typography>
                 </CardBody>
+                {/* <CardBody>
+                  <img src=""
+                </CardBody> */}
               </Card>
             ))}
           </div>
