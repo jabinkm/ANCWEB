@@ -446,11 +446,11 @@ const timelineEvents = [
     title: "Mechanical Division",
     description: "Added comprehensive mechanical services including Pipes & Pipe Supports, Structures, Equipment, and Pre-engineered Buildings",
   },
-  // {
-  //   year: "2023",
-  //   title: "Civil Projects",
-  //   description: "Expanded into Facility Management, Project Site Management, Civil & Road Construction, and Waterproofing",
-  // },
+  {
+    year: "2023",
+    title: "HVAC Division",
+    description: "Expanded services to include HVAC Systems, Ducting, and Air Conditioning",
+  },
 ];
 
 const statistics = [
